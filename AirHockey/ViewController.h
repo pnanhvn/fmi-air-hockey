@@ -12,8 +12,10 @@
     
     IBOutlet UIImageView *secondPlayerMallet;
     IBOutlet UIImageView *firstPlayerMallet;
-    double firstX;
-    double firstY;
+    double firstMalletX;
+    double firstMalletY;
+    double secondMalletX;
+    double secondMalletY;
 }
 
 @end
