@@ -50,6 +50,7 @@
 		43E1C5B614D08F120082C295 = {
 			isa = PBXGroup;
 			children = (
+				78A4B1EF14D0AABA003E8B92 /* imgs */,
 				43E1C5CB14D08F120082C295 /* AirHockey */,
 				43E1C5C414D08F120082C295 /* Frameworks */,
 				43E1C5C214D08F120082C295 /* Products */,
@@ -96,6 +97,13 @@
 				43E1C5D314D08F120082C295 /* AirHockey-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		78A4B1EF14D0AABA003E8B92 /* imgs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = imgs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
