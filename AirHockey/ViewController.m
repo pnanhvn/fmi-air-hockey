@@ -34,15 +34,38 @@
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
+- (CGPoint) moveView: (UIView *) view AtCoordinatesX: (double) x Y: (double) y forFirstMallet: (Boolean) first{
+    if(x < 0) x = 0;
+    if(x > 768 - view.frame.size.width) x = 768  - view.frame.size.width;
+    
+    if(!first){    
+        if(y < 0) y = 0;
+        if(y > 502 - view.frame.size.height) y =  502 - view.frame.size.height;
+    }
+    else{
+        if(y < 502) y = 502;
+        if(y > 1004 - view.frame.size.height) y =  1004  - view.frame.size.height;
+
+    }
+    
+    view.frame= CGRectMake(x, y, view.frame.size.width, view.frame.size.height);
+    
+    return CGPointMake(x, y);
+}
+
 - (void) moveFirstPlayerMallet:(UIPanGestureRecognizer *) sender{
     if(sender.state ==UIGestureRecognizerStateBegan){
         firstMalletX = sender.view.frame.origin.x;
         firstMalletY = sender.view.frame.origin.y;
     }
     
+    
     CGPoint newLocation = [sender translationInView:self.view];
-    sender.view.frame= CGRectMake(firstMalletX+newLocation.x, firstMalletY+ newLocation.y, sender.view.frame.size.width, sender.view.frame.size.height);
-    NSLog(@"Move detected with position %f %f", newLocation.x,newLocation.y);
+    double X = firstMalletX + newLocation.x;
+    double Y = firstMalletY + newLocation.y;
+    [self moveView:sender.view
+    AtCoordinatesX:X Y:Y forFirstMallet:YES];
+
 }
 
 - (void) moveSecondPlayerMallet:(UIPanGestureRecognizer *) sender{
@@ -50,10 +73,12 @@
         secondMalletX = sender.view.frame.origin.x;
         secondMalletY = sender.view.frame.origin.y;
     }
-
+    
     CGPoint newLocation = [sender translationInView:self.view];
-    sender.view.frame= CGRectMake(secondMalletX+newLocation.x, secondMalletY+ newLocation.y, sender.view.frame.size.width, sender.view.frame.size.height);
-    NSLog(@"Move detected with position %f %f", newLocation.x,newLocation.y);
+    double X = secondMalletX + newLocation.x;
+    double Y = secondMalletY + newLocation.y;
+    [self moveView:sender.view
+    AtCoordinatesX:X Y:Y forFirstMallet:NO];
 }
 
 
