@@ -274,6 +274,7 @@
 				43E1C5E114D08F120082C295 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
