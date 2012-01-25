@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43A12DB314D0AD2900085A7B /* field.png in Resources */ = {isa = PBXBuildFile; fileRef = 43A12DAD14D0AD2900085A7B /* field.png */; };
+		43A12DB414D0AD2900085A7B /* mallet_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 43A12DAE14D0AD2900085A7B /* mallet_blue.png */; };
+		43A12DB514D0AD2900085A7B /* mallet_green.png in Resources */ = {isa = PBXBuildFile; fileRef = 43A12DAF14D0AD2900085A7B /* mallet_green.png */; };
+		43A12DB614D0AD2900085A7B /* mallet_red.png in Resources */ = {isa = PBXBuildFile; fileRef = 43A12DB014D0AD2900085A7B /* mallet_red.png */; };
+		43A12DB714D0AD2900085A7B /* mallet_yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 43A12DB114D0AD2900085A7B /* mallet_yellow.png */; };
+		43A12DB814D0AD2900085A7B /* puck.png in Resources */ = {isa = PBXBuildFile; fileRef = 43A12DB214D0AD2900085A7B /* puck.png */; };
 		43E1C5C614D08F120082C295 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43E1C5C514D08F120082C295 /* UIKit.framework */; };
 		43E1C5C814D08F120082C295 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43E1C5C714D08F120082C295 /* Foundation.framework */; };
 		43E1C5CA14D08F120082C295 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43E1C5C914D08F120082C295 /* CoreGraphics.framework */; };
@@ -18,6 +24,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		43A12DAD14D0AD2900085A7B /* field.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = field.png; path = AirHockey/pics/field.png; sourceTree = "<group>"; };
+		43A12DAE14D0AD2900085A7B /* mallet_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mallet_blue.png; path = AirHockey/pics/mallet_blue.png; sourceTree = "<group>"; };
+		43A12DAF14D0AD2900085A7B /* mallet_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mallet_green.png; path = AirHockey/pics/mallet_green.png; sourceTree = "<group>"; };
+		43A12DB014D0AD2900085A7B /* mallet_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mallet_red.png; path = AirHockey/pics/mallet_red.png; sourceTree = "<group>"; };
+		43A12DB114D0AD2900085A7B /* mallet_yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mallet_yellow.png; path = AirHockey/pics/mallet_yellow.png; sourceTree = "<group>"; };
+		43A12DB214D0AD2900085A7B /* puck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = puck.png; path = AirHockey/pics/puck.png; sourceTree = "<group>"; };
 		43E1C5C114D08F120082C295 /* AirHockey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirHockey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43E1C5C514D08F120082C295 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		43E1C5C714D08F120082C295 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -102,6 +114,12 @@
 		78A4B1EF14D0AABA003E8B92 /* imgs */ = {
 			isa = PBXGroup;
 			children = (
+				43A12DAD14D0AD2900085A7B /* field.png */,
+				43A12DAE14D0AD2900085A7B /* mallet_blue.png */,
+				43A12DAF14D0AD2900085A7B /* mallet_green.png */,
+				43A12DB014D0AD2900085A7B /* mallet_red.png */,
+				43A12DB114D0AD2900085A7B /* mallet_yellow.png */,
+				43A12DB214D0AD2900085A7B /* puck.png */,
 			);
 			name = imgs;
 			sourceTree = "<group>";
@@ -158,6 +176,12 @@
 			files = (
 				43E1C5D014D08F120082C295 /* InfoPlist.strings in Resources */,
 				43E1C5DC14D08F120082C295 /* ViewController.xib in Resources */,
+				43A12DB314D0AD2900085A7B /* field.png in Resources */,
+				43A12DB414D0AD2900085A7B /* mallet_blue.png in Resources */,
+				43A12DB514D0AD2900085A7B /* mallet_green.png in Resources */,
+				43A12DB614D0AD2900085A7B /* mallet_red.png in Resources */,
+				43A12DB714D0AD2900085A7B /* mallet_yellow.png in Resources */,
+				43A12DB814D0AD2900085A7B /* puck.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
