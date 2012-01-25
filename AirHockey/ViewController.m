@@ -65,6 +65,7 @@
     double Y = firstMalletY + newLocation.y;
     [self moveView:sender.view
     AtCoordinatesX:X Y:Y forFirstMallet:YES];
+    NSLog(@"Speed is x: %f y: %f", [sender velocityInView:self.view].x, [sender velocityInView:self.view].y);
 
 }
 
