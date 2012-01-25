@@ -22,28 +22,40 @@
 {
     [super viewDidLoad];
     
-    UIPanGestureRecognizer *recognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(move:)];
+    UIPanGestureRecognizer *recognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(moveFirstPlayerMallet:)];
     [firstPlayerMallet addGestureRecognizer:recognizer];
     firstPlayerMallet.userInteractionEnabled = YES;
     
     
     
-    recognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(move:)];
+    recognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(moveSecondPlayerMallet:)];
     [secondPlayerMallet addGestureRecognizer:recognizer];
     secondPlayerMallet.userInteractionEnabled = YES;
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void) move:(UIPanGestureRecognizer *) sender{
+- (void) moveFirstPlayerMallet:(UIPanGestureRecognizer *) sender{
     if(sender.state ==UIGestureRecognizerStateBegan){
-        firstX = sender.view.frame.origin.x;
-        firstY = sender.view.frame.origin.y;
+        firstMalletX = sender.view.frame.origin.x;
+        firstMalletY = sender.view.frame.origin.y;
+    }
+    
+    CGPoint newLocation = [sender translationInView:self.view];
+    sender.view.frame= CGRectMake(firstMalletX+newLocation.x, firstMalletY+ newLocation.y, sender.view.frame.size.width, sender.view.frame.size.height);
+    NSLog(@"Move detected with position %f %f", newLocation.x,newLocation.y);
+}
+
+- (void) moveSecondPlayerMallet:(UIPanGestureRecognizer *) sender{
+    if(sender.state ==UIGestureRecognizerStateBegan){
+        secondMalletX = sender.view.frame.origin.x;
+        secondMalletY = sender.view.frame.origin.y;
     }
 
     CGPoint newLocation = [sender translationInView:self.view];
-    sender.view.frame= CGRectMake(firstX+newLocation.x, firstY+ newLocation.y, sender.view.frame.size.width, sender.view.frame.size.height);
+    sender.view.frame= CGRectMake(secondMalletX+newLocation.x, secondMalletY+ newLocation.y, sender.view.frame.size.width, sender.view.frame.size.height);
     NSLog(@"Move detected with position %f %f", newLocation.x,newLocation.y);
 }
+
 
 - (void)viewDidUnload
 {
