@@ -12,7 +12,7 @@
 
 double const maxHeight = 1004.0;
 double const maxWidth = 768.0;
-double const midHorizon = 502.0;
-double const midVertical = 384.0;
+double const midVertical = 502.0;
+double const midHorizon = 384.0;
 
 #endif
