@@ -10,12 +10,15 @@
 
 @interface ViewController : UIViewController{
     
+    IBOutlet UIImageView *puck;
     IBOutlet UIImageView *secondPlayerMallet;
     IBOutlet UIImageView *firstPlayerMallet;
     double firstMalletX;
     double firstMalletY;
     double secondMalletX;
     double secondMalletY;
+
 }
+
 
 @end
