@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "ScreenConstants.h"
 
 @implementation ViewController
 
@@ -36,15 +37,15 @@
 
 - (CGPoint) moveView: (UIView *) view AtCoordinatesX: (double) x Y: (double) y forFirstMallet: (Boolean) first{
     if(x < 0) x = 0;
-    if(x > 768 - view.frame.size.width) x = 768  - view.frame.size.width;
+    if(x > maxWidth - view.frame.size.width) x = maxWidth  - view.frame.size.width;
     
     if(!first){    
         if(y < 0) y = 0;
-        if(y > 502 - view.frame.size.height) y =  502 - view.frame.size.height;
+        if(y > midVertical - view.frame.size.height) y =  midVertical - view.frame.size.height;
     }
     else{
-        if(y < 502) y = 502;
-        if(y > 1004 - view.frame.size.height) y =  1004  - view.frame.size.height;
+        if(y < midVertical) y = midVertical;
+        if(y > maxHeight - view.frame.size.height) y =  maxHeight  - view.frame.size.height;
 
     }
     
@@ -85,6 +86,8 @@
 
 - (void)viewDidUnload
 {
+    [puck release];
+    puck = nil;
     [firstPlayerMallet release];
     firstPlayerMallet = nil;
     [secondPlayerMallet release];
@@ -121,6 +124,7 @@
 }
 
 - (void)dealloc {
+    [puck release];
     [firstPlayerMallet release];
     [secondPlayerMallet release];
     [super dealloc];
