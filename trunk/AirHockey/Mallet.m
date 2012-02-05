@@ -26,8 +26,7 @@
     if(y < maxFieldSize.origin.y) y = maxFieldSize.origin.y;
     if(y > maxFieldSize.origin.y + maxFieldSize.size.height - view.frame.size.height) y =  maxFieldSize.origin.y + maxFieldSize.size.height -  view.frame.size.width;
     
-    view.frame= CGRectMake(x, y, view.frame.size.width, view.frame.size.height);
-    
+    view.frame= CGRectMake(x, y, view.frame.size.width, view.frame.size.height);    
     return CGPointMake(x, y);
 }
 

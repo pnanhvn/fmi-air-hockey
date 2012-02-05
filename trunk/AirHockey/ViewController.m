@@ -35,13 +35,11 @@
     
 }
 
--(void) chechForCollisions;
-{
-    [puckDisk checkForCollisionsWithMulletOne:firstMalletDisk andMulletTwo:secondMalletDisk];
-}
 
 - (void) movePuck {
-    
+
+    [puckDisk checkForCollisionsWithMulletOne:firstMalletDisk andMulletTwo:secondMalletDisk];
+    //[puckDisk moveForElapsedTime: 0.1];
 }
 
 

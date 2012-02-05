@@ -10,7 +10,6 @@
 
 @implementation PlayDisk
 
-@synthesize center;
 @synthesize angle;
 @synthesize speed;
 @synthesize radius;
@@ -18,7 +17,6 @@
 - (id)initWithImageView: (UIImageView *) view andFieldSize: (CGRect) fieldSize {
     self = [super init];
     if (self) {
-        center = CGPointMake(view.frame.origin.x + view.frame.size.width, view.frame.origin.y + view.frame.size.height);
         angle = 0.0;
         speed = 0.0;
         imageView = view;
@@ -26,6 +24,10 @@
         self.radius = view.frame.size.height / 2;
     }
     return self;
+}
+
+- (CGPoint) getCenter{
+    return CGPointMake(imageView.frame.origin.x + imageView.frame.size.width, imageView.frame.origin.y + imageView.frame.size.height);
 }
 
 @end
