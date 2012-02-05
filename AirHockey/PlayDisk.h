@@ -16,6 +16,7 @@
 @property CGPoint center;
 @property double angle;
 @property double speed;
+@property double radius;
 
 
 - (id)initWithImageView: (UIImageView *) view andFieldSize: (CGRect) fieldSize;

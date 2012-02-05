@@ -97,6 +97,8 @@
 		43E1C5CB14D08F120082C295 /* AirHockey */ = {
 			isa = PBXGroup;
 			children = (
+				43CE4F6214DEC8D00039C682 /* Mallet.m */,
+				43CE4F6114DEC8D00039C682 /* Mallet.h */,
 				78A3017C14DEC02200BA6E98 /* PlayDisk.m */,
 				78A3017B14DEC02200BA6E98 /* PlayDisk.h */,
 				78A4E61F14D2B00700285CC7 /* ScreenConstants.h */,
@@ -106,8 +108,6 @@
 				43E1C5D814D08F120082C295 /* ViewController.m */,
 				43E1C5DA14D08F120082C295 /* ViewController.xib */,
 				43E1C5CC14D08F120082C295 /* Supporting Files */,
-				43CE4F6114DEC8D00039C682 /* Mallet.h */,
-				43CE4F6214DEC8D00039C682 /* Mallet.m */,
 			);
 			path = AirHockey;
 			sourceTree = "<group>";
