@@ -13,6 +13,7 @@
 @synthesize center;
 @synthesize angle;
 @synthesize speed;
+@synthesize radius;
 
 - (id)initWithImageView: (UIImageView *) view andFieldSize: (CGRect) fieldSize {
     self = [super init];
@@ -22,6 +23,7 @@
         speed = 0.0;
         imageView = view;
         maxFieldSize = fieldSize;
+        self.radius = view.frame.size.height / 2;
     }
     return self;
 }
