@@ -7,23 +7,27 @@
 //
 
 #import "Puck.h"
+#include "math.h"
 
 
 @implementation Puck
 - (void) checkForCollisionsWithMulletOne: (PlayDisk*) mulletOne andMulletTwo: (PlayDisk*) mulletTwo{
-    double hypotenuseForMalletOne = sqrt(pow(self.center.x - mulletOne.center.x, 2) + pow(self.center.y - mulletOne.center.y, 2));
-    if ((self.radius + mulletOne.radius) <= hypotenuseForMalletOne){
-    
+    double hypotenuseForMalletOne = sqrt(pow([self getCenter].x - [mulletOne getCenter].x, 2) + pow([self getCenter].y - [mulletOne getCenter].y, 2));
+    if ((self.radius + mulletOne.radius) >= hypotenuseForMalletOne){
+        double cosToMalletOne = abs([self getCenter].x - [mulletOne getCenter].x) / hypotenuseForMalletOne;
+        double angle = acos(cosToMalletOne);
+        imageView.frame= CGRectMake(imageView.frame.origin.x + 10, imageView.frame.origin.y + 10, imageView.frame.size.width, imageView.frame.size.height);
     } 
     
-    double cosToMalletOne = abs(self.center.x - mulletOne.center.x) / hypotenuseForMalletOne;
     
-    double hypotenuseForMalletTwo = sqrt(pow(self.center.x - mulletTwo.center.x, 2) + pow(self.center.y - mulletTwo.center.y, 2));
     
-    if ((self.radius + mulletTwo.radius) <= hypotenuseForMalletTwo){
-        
+    double hypotenuseForMalletTwo = sqrt(pow([self getCenter].x - [mulletTwo getCenter].x, 2) + pow([self getCenter].y - [mulletTwo getCenter].y, 2));
+    
+    if ((self.radius + mulletTwo.radius) >= hypotenuseForMalletTwo){
+        double cosToMalletTwo = abs([self getCenter].x - [mulletTwo getCenter].x) / hypotenuseForMalletTwo;
+        imageView.frame= CGRectMake(imageView.frame.origin.x + 10, imageView.frame.origin.y + 10, imageView.frame.size.width, imageView.frame.size.height);
     } 
     
-    double cosToMalletTwo = abs(self.center.x - mulletTwo.center.x) / hypotenuseForMalletTwo;
+    
 }
 @end
