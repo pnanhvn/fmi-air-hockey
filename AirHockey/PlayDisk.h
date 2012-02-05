@@ -8,12 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
-@interface PlayDisk : NSObject
+@interface PlayDisk : NSObject{
+    UIImageView *imageView;
+    CGRect maxFieldSize;
+}
 
 @property CGPoint center;
 @property double angle;
 @property double speed;
 
-//- (void)applicationDidEnterBackground:(UIApplication *)application
 
+- (id)initWithImageView: (UIImageView *) view andFieldSize: (CGRect) fieldSize;
 @end
