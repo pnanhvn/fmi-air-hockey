@@ -18,7 +18,7 @@
 - (id)initWithImageView: (UIImageView *) view andFieldSize: (CGRect) fieldSize {
     self = [super init];
     if (self) {
-        center = view.frame.origin;
+        center = CGPointMake(view.frame.origin.x + view.frame.size.width, view.frame.origin.y + view.frame.size.height);
         angle = 0.0;
         speed = 0.0;
         imageView = view;

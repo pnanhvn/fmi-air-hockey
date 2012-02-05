@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		438C9F8314DED094002F91C4 /* Puck.m in Sources */ = {isa = PBXBuildFile; fileRef = 438C9F8214DED094002F91C4 /* Puck.m */; };
 		43A12DB314D0AD2900085A7B /* field.png in Resources */ = {isa = PBXBuildFile; fileRef = 43A12DAD14D0AD2900085A7B /* field.png */; };
 		43A12DB414D0AD2900085A7B /* mallet_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 43A12DAE14D0AD2900085A7B /* mallet_blue.png */; };
 		43A12DB514D0AD2900085A7B /* mallet_green.png in Resources */ = {isa = PBXBuildFile; fileRef = 43A12DAF14D0AD2900085A7B /* mallet_green.png */; };
@@ -26,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		438C9F8114DED094002F91C4 /* Puck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Puck.h; sourceTree = "<group>"; };
+		438C9F8214DED094002F91C4 /* Puck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Puck.m; sourceTree = "<group>"; };
 		43A12DAD14D0AD2900085A7B /* field.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = field.png; path = AirHockey/pics/field.png; sourceTree = "<group>"; };
 		43A12DAE14D0AD2900085A7B /* mallet_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mallet_blue.png; path = AirHockey/pics/mallet_blue.png; sourceTree = "<group>"; };
 		43A12DAF14D0AD2900085A7B /* mallet_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mallet_green.png; path = AirHockey/pics/mallet_green.png; sourceTree = "<group>"; };
@@ -97,10 +100,12 @@
 		43E1C5CB14D08F120082C295 /* AirHockey */ = {
 			isa = PBXGroup;
 			children = (
-				43CE4F6214DEC8D00039C682 /* Mallet.m */,
 				43CE4F6114DEC8D00039C682 /* Mallet.h */,
-				78A3017C14DEC02200BA6E98 /* PlayDisk.m */,
+				43CE4F6214DEC8D00039C682 /* Mallet.m */,
+				438C9F8114DED094002F91C4 /* Puck.h */,
+				438C9F8214DED094002F91C4 /* Puck.m */,
 				78A3017B14DEC02200BA6E98 /* PlayDisk.h */,
+				78A3017C14DEC02200BA6E98 /* PlayDisk.m */,
 				78A4E61F14D2B00700285CC7 /* ScreenConstants.h */,
 				43E1C5D414D08F120082C295 /* AppDelegate.h */,
 				43E1C5D514D08F120082C295 /* AppDelegate.m */,
@@ -209,6 +214,7 @@
 				43E1C5D914D08F120082C295 /* ViewController.m in Sources */,
 				78A3017D14DEC02200BA6E98 /* PlayDisk.m in Sources */,
 				43CE4F6314DEC8D00039C682 /* Mallet.m in Sources */,
+				438C9F8314DED094002F91C4 /* Puck.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

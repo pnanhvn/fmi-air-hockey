@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "PlayDisk.h"
 #import "Mallet.h"
+#import "Puck.h"
 
 @interface ViewController : UIViewController{
     
@@ -19,8 +20,7 @@
     double firstMalletY;
     double secondMalletX; 
     double secondMalletY;
-    
-    PlayDisk *puckDisk;
+    Puck *puckDisk;
     Mallet *firstMalletDisk, *secondMalletDisk;
 
 }
