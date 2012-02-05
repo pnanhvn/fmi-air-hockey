@@ -14,4 +14,16 @@
 @synthesize angle;
 @synthesize speed;
 
+- (id)initWithImageView: (UIImageView *) view andFieldSize: (CGRect) fieldSize {
+    self = [super init];
+    if (self) {
+        center = view.frame.origin;
+        angle = 0.0;
+        speed = 0.0;
+        imageView = view;
+        maxFieldSize = fieldSize;
+    }
+    return self;
+}
+
 @end

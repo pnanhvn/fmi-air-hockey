@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PlayDisk.h"
+#import "Mallet.h"
 
 @interface ViewController : UIViewController{
     
@@ -15,8 +17,11 @@
     IBOutlet UIImageView *firstPlayerMallet;
     double firstMalletX;
     double firstMalletY;
-    double secondMalletX;
+    double secondMalletX; 
     double secondMalletY;
+    
+    PlayDisk *puckDisk;
+    Mallet *firstMalletDisk, *secondMalletDisk;
 
 }
 

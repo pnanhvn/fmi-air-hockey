@@ -22,19 +22,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    
+    firstMalletDisk = [[Mallet alloc] initWithImageView:firstPlayerMallet andFieldSize:CGRectMake(0, midVertical, maxWidth, maxHeight - midVertical)];
+    
+    secondMalletDisk = [[Mallet alloc] initWithImageView:secondPlayerMallet andFieldSize:CGRectMake(0, 0, maxWidth, midVertical)];
+    
+    puckDisk = [[PlayDisk alloc] initWithImageView:puck andFieldSize:CGRectMake(0, 0, maxWidth, maxWidth)];
+    
  
     [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(movePuck) userInfo:nil repeats:YES];
     
-    UIPanGestureRecognizer *recognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(moveFirstPlayerMallet:)];
-    [firstPlayerMallet addGestureRecognizer:recognizer];
-    firstPlayerMallet.userInteractionEnabled = YES;
-    
-    
-    
-    recognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(moveSecondPlayerMallet:)];
-    [secondPlayerMallet addGestureRecognizer:recognizer];
-    secondPlayerMallet.userInteractionEnabled = YES;
-	// Do any additional setup after loading the view, typically from a nib.
 }
 
 -(void) chechForCollisionsWithMalletOneSpeed:(double)s1 andMalletTwoSpeed:(double)s2
@@ -46,53 +44,8 @@
     
 }
 
-- (CGPoint) moveView: (UIView *) view AtCoordinatesX: (double) x Y: (double) y forFirstMallet: (Boolean) first{
-    if(x < 0) x = 0;
-    if(x > maxWidth - view.frame.size.width) x = maxWidth  - view.frame.size.width;
-    
-    if(!first){    
-        if(y < 0) y = 0;
-        if(y > midVertical - view.frame.size.height) y =  midVertical - view.frame.size.height;
-    }
-    else{
-        if(y < midVertical) y = midVertical;
-        if(y > maxHeight - view.frame.size.height) y =  maxHeight  - view.frame.size.height;
 
-    }
-    
-    view.frame= CGRectMake(x, y, view.frame.size.width, view.frame.size.height);
-    
-    return CGPointMake(x, y);
-}
 
-- (void) moveFirstPlayerMallet:(UIPanGestureRecognizer *) sender{
-    if(sender.state ==UIGestureRecognizerStateBegan){
-        firstMalletX = sender.view.frame.origin.x;
-        firstMalletY = sender.view.frame.origin.y;
-    }
-    
-    
-    CGPoint newLocation = [sender translationInView:self.view];
-    double X = firstMalletX + newLocation.x;
-    double Y = firstMalletY + newLocation.y;
-    [self moveView:sender.view
-    AtCoordinatesX:X Y:Y forFirstMallet:YES];
-    NSLog(@"Speed is x: %f y: %f", [sender velocityInView:self.view].x, [sender velocityInView:self.view].y);
-
-}
-
-- (void) moveSecondPlayerMallet:(UIPanGestureRecognizer *) sender{
-    if(sender.state ==UIGestureRecognizerStateBegan){
-        secondMalletX = sender.view.frame.origin.x;
-        secondMalletY = sender.view.frame.origin.y;
-    }
-    
-    CGPoint newLocation = [sender translationInView:self.view];
-    double X = secondMalletX + newLocation.x;
-    double Y = secondMalletY + newLocation.y;
-    [self moveView:sender.view
-    AtCoordinatesX:X Y:Y forFirstMallet:NO];
-}
 
 
 - (void)viewDidUnload
@@ -115,6 +68,7 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
+ 
     [super viewDidAppear:animated];
 }
 
