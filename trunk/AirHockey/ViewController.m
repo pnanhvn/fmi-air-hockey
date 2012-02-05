@@ -22,6 +22,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+ 
+    [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(movePuck) userInfo:nil repeats:YES];
     
     UIPanGestureRecognizer *recognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(moveFirstPlayerMallet:)];
     [firstPlayerMallet addGestureRecognizer:recognizer];
@@ -33,6 +35,15 @@
     [secondPlayerMallet addGestureRecognizer:recognizer];
     secondPlayerMallet.userInteractionEnabled = YES;
 	// Do any additional setup after loading the view, typically from a nib.
+}
+
+-(void) chechForCollisionsWithMalletOneSpeed:(double)s1 andMalletTwoSpeed:(double)s2
+{
+    
+}
+
+- (void) movePuck {
+    
 }
 
 - (CGPoint) moveView: (UIView *) view AtCoordinatesX: (double) x Y: (double) y forFirstMallet: (Boolean) first{

@@ -21,6 +21,7 @@
 		43E1C5D614D08F120082C295 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 43E1C5D514D08F120082C295 /* AppDelegate.m */; };
 		43E1C5D914D08F120082C295 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43E1C5D814D08F120082C295 /* ViewController.m */; };
 		43E1C5DC14D08F120082C295 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43E1C5DA14D08F120082C295 /* ViewController.xib */; };
+		78A3017D14DEC02200BA6E98 /* PlayDisk.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A3017C14DEC02200BA6E98 /* PlayDisk.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,8 @@
 		43E1C5D714D08F120082C295 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		43E1C5D814D08F120082C295 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		43E1C5DB14D08F120082C295 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		78A3017B14DEC02200BA6E98 /* PlayDisk.h */ = {isa = PBXFileReference; fileEncoding = 4; path = PlayDisk.h; sourceTree = "<group>"; };
+		78A3017C14DEC02200BA6E98 /* PlayDisk.m */ = {isa = PBXFileReference; fileEncoding = 4; path = PlayDisk.m; sourceTree = "<group>"; };
 		78A4E61F14D2B00700285CC7 /* ScreenConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScreenConstants.h; path = ../ScreenConstants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,6 +94,8 @@
 		43E1C5CB14D08F120082C295 /* AirHockey */ = {
 			isa = PBXGroup;
 			children = (
+				78A3017C14DEC02200BA6E98 /* PlayDisk.m */,
+				78A3017B14DEC02200BA6E98 /* PlayDisk.h */,
 				78A4E61F14D2B00700285CC7 /* ScreenConstants.h */,
 				43E1C5D414D08F120082C295 /* AppDelegate.h */,
 				43E1C5D514D08F120082C295 /* AppDelegate.m */,
@@ -197,6 +202,7 @@
 				43E1C5D214D08F120082C295 /* main.m in Sources */,
 				43E1C5D614D08F120082C295 /* AppDelegate.m in Sources */,
 				43E1C5D914D08F120082C295 /* ViewController.m in Sources */,
+				78A3017D14DEC02200BA6E98 /* PlayDisk.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
