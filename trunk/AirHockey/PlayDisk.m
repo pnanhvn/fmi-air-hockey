@@ -27,7 +27,7 @@
 }
 
 - (CGPoint) getCenter{
-    return CGPointMake(imageView.frame.origin.x + imageView.frame.size.width, imageView.frame.origin.y + imageView.frame.size.height);
+    return CGPointMake(imageView.frame.origin.x + imageView.frame.size.width/2, imageView.frame.origin.y + imageView.frame.size.height/2);
 }
 
 @end
