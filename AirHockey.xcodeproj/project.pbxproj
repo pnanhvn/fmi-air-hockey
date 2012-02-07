@@ -130,7 +130,6 @@
 				43E1C5CD14D08F120082C295 /* AirHockey-Info.plist */,
 				43E1C5CE14D08F120082C295 /* InfoPlist.strings */,
 				43E1C5D114D08F120082C295 /* main.m */,
-				43E1C5D314D08F120082C295 /* AirHockey-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -138,6 +137,7 @@
 		78A393AD14E1A73F000B31D7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				43E1C5D314D08F120082C295 /* AirHockey-Prefix.pch */,
 				78A393B114E1A7B8000B31D7 /* PlayerMenuViewController.xib */,
 				43E1C5DA14D08F120082C295 /* ViewController.xib */,
 			);
