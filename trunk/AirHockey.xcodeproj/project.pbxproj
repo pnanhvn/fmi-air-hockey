@@ -24,6 +24,8 @@
 		43E1C5D914D08F120082C295 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43E1C5D814D08F120082C295 /* ViewController.m */; };
 		43E1C5DC14D08F120082C295 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43E1C5DA14D08F120082C295 /* ViewController.xib */; };
 		78A3017D14DEC02200BA6E98 /* PlayDisk.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A3017C14DEC02200BA6E98 /* PlayDisk.m */; };
+		78A393B214E1A7B8000B31D7 /* PlayerMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A393B014E1A7B8000B31D7 /* PlayerMenuViewController.m */; };
+		78A393B314E1A7B8000B31D7 /* PlayerMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78A393B114E1A7B8000B31D7 /* PlayerMenuViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,9 @@
 		43E1C5DB14D08F120082C295 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		78A3017B14DEC02200BA6E98 /* PlayDisk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayDisk.h; sourceTree = "<group>"; };
 		78A3017C14DEC02200BA6E98 /* PlayDisk.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayDisk.m; sourceTree = "<group>"; };
+		78A393AF14E1A7B8000B31D7 /* PlayerMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerMenuViewController.h; sourceTree = "<group>"; };
+		78A393B014E1A7B8000B31D7 /* PlayerMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerMenuViewController.m; sourceTree = "<group>"; };
+		78A393B114E1A7B8000B31D7 /* PlayerMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerMenuViewController.xib; sourceTree = "<group>"; };
 		78A4E61F14D2B00700285CC7 /* ScreenConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScreenConstants.h; path = ../ScreenConstants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,6 +105,7 @@
 		43E1C5CB14D08F120082C295 /* AirHockey */ = {
 			isa = PBXGroup;
 			children = (
+				78A393AD14E1A73F000B31D7 /* Resources */,
 				43CE4F6114DEC8D00039C682 /* Mallet.h */,
 				43CE4F6214DEC8D00039C682 /* Mallet.m */,
 				438C9F8114DED094002F91C4 /* Puck.h */,
@@ -109,9 +115,10 @@
 				78A4E61F14D2B00700285CC7 /* ScreenConstants.h */,
 				43E1C5D414D08F120082C295 /* AppDelegate.h */,
 				43E1C5D514D08F120082C295 /* AppDelegate.m */,
+				78A393AF14E1A7B8000B31D7 /* PlayerMenuViewController.h */,
+				78A393B014E1A7B8000B31D7 /* PlayerMenuViewController.m */,
 				43E1C5D714D08F120082C295 /* ViewController.h */,
 				43E1C5D814D08F120082C295 /* ViewController.m */,
-				43E1C5DA14D08F120082C295 /* ViewController.xib */,
 				43E1C5CC14D08F120082C295 /* Supporting Files */,
 			);
 			path = AirHockey;
@@ -126,6 +133,15 @@
 				43E1C5D314D08F120082C295 /* AirHockey-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		78A393AD14E1A73F000B31D7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				78A393B114E1A7B8000B31D7 /* PlayerMenuViewController.xib */,
+				43E1C5DA14D08F120082C295 /* ViewController.xib */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		78A4B1EF14D0AABA003E8B92 /* imgs */ = {
@@ -199,6 +215,7 @@
 				43A12DB614D0AD2900085A7B /* mallet_red.png in Resources */,
 				43A12DB714D0AD2900085A7B /* mallet_yellow.png in Resources */,
 				43A12DB814D0AD2900085A7B /* puck.png in Resources */,
+				78A393B314E1A7B8000B31D7 /* PlayerMenuViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +232,7 @@
 				78A3017D14DEC02200BA6E98 /* PlayDisk.m in Sources */,
 				43CE4F6314DEC8D00039C682 /* Mallet.m in Sources */,
 				438C9F8314DED094002F91C4 /* Puck.m in Sources */,
+				78A393B214E1A7B8000B31D7 /* PlayerMenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

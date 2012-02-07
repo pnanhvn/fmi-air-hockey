@@ -7,8 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "PlayerMenuViewController.h"
 #import "ScreenConstants.h"
-
+	
 @implementation ViewController
 
 - (void)didReceiveMemoryWarning
@@ -43,8 +44,10 @@
 }
 
 
-
-
+-(IBAction)goToPlayerMenu
+{
+    [self dismissModalViewControllerAnimated:YES];
+}
 
 - (void)viewDidUnload
 {
