@@ -26,6 +26,11 @@
 		78A3017D14DEC02200BA6E98 /* PlayDisk.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A3017C14DEC02200BA6E98 /* PlayDisk.m */; };
 		78A393B214E1A7B8000B31D7 /* PlayerMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A393B014E1A7B8000B31D7 /* PlayerMenuViewController.m */; };
 		78A393B314E1A7B8000B31D7 /* PlayerMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78A393B114E1A7B8000B31D7 /* PlayerMenuViewController.xib */; };
+		78AA1D8B14E1D33800608BD9 /* blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 78AA1D8614E1D33800608BD9 /* blue.png */; };
+		78AA1D8C14E1D33800608BD9 /* mallet_blue_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 78AA1D8714E1D33800608BD9 /* mallet_blue_selected.png */; };
+		78AA1D8D14E1D33800608BD9 /* mallet_green_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 78AA1D8814E1D33800608BD9 /* mallet_green_selected.png */; };
+		78AA1D8E14E1D33800608BD9 /* mallet_red_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 78AA1D8914E1D33800608BD9 /* mallet_red_selected.png */; };
+		78AA1D8F14E1D33800608BD9 /* mallet_yellow_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 78AA1D8A14E1D33800608BD9 /* mallet_yellow_selected.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +63,11 @@
 		78A393B014E1A7B8000B31D7 /* PlayerMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerMenuViewController.m; sourceTree = "<group>"; };
 		78A393B114E1A7B8000B31D7 /* PlayerMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerMenuViewController.xib; sourceTree = "<group>"; };
 		78A4E61F14D2B00700285CC7 /* ScreenConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScreenConstants.h; path = ../ScreenConstants.h; sourceTree = "<group>"; };
+		78AA1D8614E1D33800608BD9 /* blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blue.png; path = AirHockey/pics/blue.png; sourceTree = "<group>"; };
+		78AA1D8714E1D33800608BD9 /* mallet_blue_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mallet_blue_selected.png; path = AirHockey/pics/mallet_blue_selected.png; sourceTree = "<group>"; };
+		78AA1D8814E1D33800608BD9 /* mallet_green_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mallet_green_selected.png; path = AirHockey/pics/mallet_green_selected.png; sourceTree = "<group>"; };
+		78AA1D8914E1D33800608BD9 /* mallet_red_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mallet_red_selected.png; path = AirHockey/pics/mallet_red_selected.png; sourceTree = "<group>"; };
+		78AA1D8A14E1D33800608BD9 /* mallet_yellow_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mallet_yellow_selected.png; path = AirHockey/pics/mallet_yellow_selected.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +157,11 @@
 		78A4B1EF14D0AABA003E8B92 /* imgs */ = {
 			isa = PBXGroup;
 			children = (
+				78AA1D8614E1D33800608BD9 /* blue.png */,
+				78AA1D8714E1D33800608BD9 /* mallet_blue_selected.png */,
+				78AA1D8814E1D33800608BD9 /* mallet_green_selected.png */,
+				78AA1D8914E1D33800608BD9 /* mallet_red_selected.png */,
+				78AA1D8A14E1D33800608BD9 /* mallet_yellow_selected.png */,
 				43A12DAD14D0AD2900085A7B /* field.png */,
 				43A12DAE14D0AD2900085A7B /* mallet_blue.png */,
 				43A12DAF14D0AD2900085A7B /* mallet_green.png */,
@@ -216,6 +231,11 @@
 				43A12DB714D0AD2900085A7B /* mallet_yellow.png in Resources */,
 				43A12DB814D0AD2900085A7B /* puck.png in Resources */,
 				78A393B314E1A7B8000B31D7 /* PlayerMenuViewController.xib in Resources */,
+				78AA1D8B14E1D33800608BD9 /* blue.png in Resources */,
+				78AA1D8C14E1D33800608BD9 /* mallet_blue_selected.png in Resources */,
+				78AA1D8D14E1D33800608BD9 /* mallet_green_selected.png in Resources */,
+				78AA1D8E14E1D33800608BD9 /* mallet_red_selected.png in Resources */,
+				78AA1D8F14E1D33800608BD9 /* mallet_yellow_selected.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
