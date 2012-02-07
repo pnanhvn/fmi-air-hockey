@@ -36,11 +36,21 @@
         yAtGestureBegin = sender.view.frame.origin.y;
     }
     
+    if(sender.state == UIGestureRecognizerStateEnded){
+        self.speed = 0;
+    }
+    else{
+        self.speed = log2((abs([sender velocityInView:imageView.superview].x) + abs([sender velocityInView:imageView.superview].y))/5);
+    }
+    NSLog(@"%f,%f", [sender velocityInView:imageView.superview].x, [sender velocityInView:imageView.superview].y);
     
     CGPoint newLocation = [sender translationInView:imageView.superview];
     double X = xAtGestureBegin + newLocation.x;
     double Y = yAtGestureBegin + newLocation.y;
     [self moveView:sender.view
     AtCoordinatesX:X Y:Y forFirstMallet:YES];
+    
+    
+    
 }
 @end

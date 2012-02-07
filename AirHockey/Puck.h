@@ -8,6 +8,9 @@
 
 #import "PlayDisk.h"
 
-@interface Puck : PlayDisk
+@interface Puck : PlayDisk{
+    Boolean hitAWall;
+}
+- (void) moveForElapsedTime: (double) elapsedTime;
 - (void) checkForCollisionsWithMulletOne: (PlayDisk*) mulletOne andMulletTwo: (PlayDisk*) mulletTwo;
 @end

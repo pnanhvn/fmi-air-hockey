@@ -29,10 +29,10 @@
     
     secondMalletDisk = [[Mallet alloc] initWithImageView:secondPlayerMallet andFieldSize:CGRectMake(0, 0, maxWidth, midVertical)];
     
-    puckDisk = [[Puck alloc] initWithImageView:puck andFieldSize:CGRectMake(0, 0, maxWidth, maxWidth)];
+    puckDisk = [[Puck alloc] initWithImageView:puck andFieldSize:CGRectMake(0, 0, maxWidth, maxHeight)];
     
  
-    [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(movePuck) userInfo:nil repeats:YES];
+    [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(movePuck) userInfo:nil repeats:YES];
     
 }
 
@@ -40,7 +40,7 @@
 - (void) movePuck {
 
     [puckDisk checkForCollisionsWithMulletOne:firstMalletDisk andMulletTwo:secondMalletDisk];
-    //[puckDisk moveForElapsedTime: 0.1];
+    [puckDisk moveForElapsedTime: 0.1];
 }
 
 
