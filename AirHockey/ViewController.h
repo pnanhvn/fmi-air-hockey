@@ -11,7 +11,7 @@
 #import "Mallet.h"
 #import "Puck.h"
 
-@interface ViewController : UIViewController{
+@interface ViewController : UIViewController<UIGestureRecognizerDelegate>{
     
     IBOutlet UIImageView *puck;
     IBOutlet UIImageView *secondPlayerMallet;
