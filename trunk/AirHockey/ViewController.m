@@ -34,7 +34,7 @@
  
     [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(movePuck) userInfo:nil repeats:YES];
     UITapGestureRecognizer *recon = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(moveMalletOnTap:)];
-    
+    recon.delegate = self;
     [self.view addGestureRecognizer:recon];
     
 }
@@ -56,6 +56,9 @@
     [puckDisk moveForElapsedTime: 0.1];
 }
 
+- (BOOL) gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer{
+    return YES;
+}
 
 -(IBAction)goToPlayerMenu
 {
