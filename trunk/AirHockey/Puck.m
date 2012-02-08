@@ -19,20 +19,26 @@
     return self;
 }
 
-- (void) checkForCollisionsWithMullet:(PlayDisk *)mullet{
+- (Boolean) checkForCollisionsWithMullet:(PlayDisk *)mullet{
     double hypotenuseForMalletOne = sqrt(pow([self getCenter].x - [mullet getCenter].x, 2) + pow([self getCenter].y - [mullet getCenter].y, 2));
     if ((self.radius + mullet.radius) >= hypotenuseForMalletOne){
         //double tanToTangent = ([self getCenter].y - [mullet getCenter].y) / ([self getCenter].x - [mullet getCenter].x);
         double angle = atan2([self getCenter].y - [mullet getCenter].y , [self getCenter].x - [mullet getCenter].x);
         
-        if([self getCenter].x < [mullet getCenter].x){
-            //angle += M_PI;
-        }
         
         self.angle = angle;
         self.speed += mullet.speed;
+        if(self.speed > 50.0) self.speed = 50.0;
+        
+        
+        NSLog(@"puck speed: %f mullet speed: %f", self.speed, mullet.speed);
+        //self.speed = 20;
         mullet.speed = 0;
+        
+        return true;
+        
     }  
+    return false;
 }
 - (void) checkForCollisionsWithMulletOne: (PlayDisk*) mulletOne andMulletTwo: (PlayDisk*) mulletTwo{
     [self checkForCollisionsWithMullet:mulletOne];
@@ -53,8 +59,15 @@
 
 
 - (void) moveForElapsedTime: (double) elapsedTime{
+    double newX = imageView.frame.origin.x + self.speed * cos(self.angle);
+    double newY = imageView.frame.origin.y + self.speed * sin(self.angle);
     
-    if(self.speed > 0.01) imageView.frame= CGRectMake(imageView.frame.origin.x + self.speed * cos(self.angle), imageView.frame.origin.y + self.speed*sin(self.angle), imageView.frame.size.width, imageView.frame.size.height);
+    if(newX < maxFieldSize.origin.x - 100) newX = maxFieldSize.origin.x;
+    if(newX +  2 * self.radius > maxFieldSize.origin.x + maxFieldSize.size.width + 100) newX = maxFieldSize.origin.x + maxFieldSize.size.width;
+    if(newY < maxFieldSize.origin.y - 100) newY = maxFieldSize.origin.y;
+    if(newY + 2 * self.radius > maxFieldSize.origin.y + maxFieldSize.size.height + 100) newY = maxFieldSize.origin.y + maxFieldSize.size.height;
+    
+    if(self.speed > 0.01) imageView.frame= CGRectMake(newX, newY, imageView.frame.size.width, imageView.frame.size.height);
     if (self.speed > 0) {
         self.speed -= 0.3;  
     }
