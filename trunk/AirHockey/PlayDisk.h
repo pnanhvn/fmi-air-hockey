@@ -22,4 +22,5 @@
 - (id)initWithImageView: (UIImageView *) view andFieldSize: (CGRect) fieldSize;
 - (CGPoint) getCenter;
 - (void) moveToStart;
+
 @end
