@@ -8,7 +8,23 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PlayerMenuViewController : UIViewController
+@interface PlayerMenuViewController : UIViewController {
+   
+    IBOutlet UIImageView* malletOneBlue;
+    IBOutlet UIImageView* malletOneRed;
+    IBOutlet UIImageView* malletOneGreen;
+    IBOutlet UIImageView* malletOneYellow;
+    
+    IBOutlet UIImageView* malletTwoBlue;
+    IBOutlet UIImageView* malletTwoRed;
+    IBOutlet UIImageView* malletTwoGreen;
+    IBOutlet UIImageView* malletTwoYellow; 
+}
+@property NSString* malletOneChoice;
+@property NSString* malletTwoChoice;
+
+@property NSString* playerOneName;
+@property NSString* playerTwoName;
 
 -(IBAction)showPlaygroundView;
 

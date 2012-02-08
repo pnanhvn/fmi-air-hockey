@@ -10,12 +10,16 @@
 #import "ViewController.h"
 @implementation PlayerMenuViewController
 
+@synthesize playerOneName = _playerOneName;
+@synthesize playerTwoName = _playerTwoName;
+@synthesize malletOneChoice = _malletOneChoice;
+@synthesize malletTwoChoice = _malletTwoChoice;
+
 -(IBAction)showPlaygroundView
 {
     ViewController* playView = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
     playView.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     [self presentModalViewController:playView animated:YES];
-    	
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
