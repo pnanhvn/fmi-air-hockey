@@ -22,12 +22,17 @@
         imageView = view;
         maxFieldSize = fieldSize;
         self.radius = view.frame.size.height / 2;
+        startPosition = view.frame;
     }
     return self;
 }
 
 - (CGPoint) getCenter{
     return CGPointMake(imageView.frame.origin.x + imageView.frame.size.width/2, imageView.frame.origin.y + imageView.frame.size.height/2);
+}
+
+- (void) moveToStart{
+    imageView.frame = startPosition;
 }
 
 @end
