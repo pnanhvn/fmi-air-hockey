@@ -12,5 +12,5 @@
     double xAtGestureBegin;
     double yAtGestureBegin;
 }
-
+- (void) moveToPositionX: (double) x Y: (double) y;
 @end

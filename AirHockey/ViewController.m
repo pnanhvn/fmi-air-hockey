@@ -33,9 +33,22 @@
     
  
     [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(movePuck) userInfo:nil repeats:YES];
+    UITapGestureRecognizer *recon = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(moveMalletOnTap:)];
+    
+    [self.view addGestureRecognizer:recon];
     
 }
 
+- (void) moveMalletOnTap: (UITapGestureRecognizer *) recognizer{
+    CGPoint location = [recognizer locationInView:self.view];
+    NSLog(@"%f", location.y);
+    if(location.y > maxHeight / 2 ){
+        [firstMalletDisk moveToPositionX:location.x Y:location.y];
+    }
+    else{
+        [secondMalletDisk moveToPositionX:location.x Y:location.y];
+    }
+}
 
 - (void) movePuck {
 
