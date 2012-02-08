@@ -11,6 +11,7 @@
 @interface PlayDisk : NSObject{
     UIImageView *imageView;
     CGRect maxFieldSize;
+    CGRect startPosition;
 }
 
 @property double angle;
@@ -20,4 +21,5 @@
 
 - (id)initWithImageView: (UIImageView *) view andFieldSize: (CGRect) fieldSize;
 - (CGPoint) getCenter;
+- (void) moveToStart;
 @end

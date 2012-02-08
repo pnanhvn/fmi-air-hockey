@@ -47,11 +47,27 @@
     
 
     if(imageView.frame.origin.x < maxFieldSize.origin.x || imageView.frame.origin.x + 2 * self.radius > maxFieldSize.origin.x  + maxFieldSize.size.width ){
-        self.angle = M_PI + self.angle;
+        self.angle = -M_PI - self.angle;
     }
     
-    if(imageView.frame.origin.x < maxFieldSize.origin.x || imageView.frame.origin.y < maxFieldSize.origin.y || imageView.frame.origin.x + 2 * self.radius > maxFieldSize.origin.x  + maxFieldSize.size.width || imageView.frame.origin.y + 2 * self.radius> maxFieldSize.origin.y  + maxFieldSize.size.height){
+    if(imageView.frame.origin.y < maxFieldSize.origin.y || imageView.frame.origin.y + 2 * self.radius> maxFieldSize.origin.y  + maxFieldSize.size.height){
+        if(imageView.frame.origin.x > 200 && imageView.frame.origin.x < 568){
+            self.speed = 0.0;
+            self.angle = 0.0;
+           
+            
+            [self moveToStart];
+            [mulletOne moveToStart];
+            [mulletTwo moveToStart];
+            
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Point" message:nil delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+            [alert show];
+            [alert release];
+        }
+        else{
             self.angle = -self.angle;
+        }
+            
  
     }
 }

@@ -15,6 +15,7 @@
     if (self) {
         UIPanGestureRecognizer *recognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(moveMalletFromGestureRecognizer:)];
         [view addGestureRecognizer:recognizer];
+        [recognizer release];
         view.userInteractionEnabled = YES;
     }
     return self;
@@ -52,5 +53,15 @@
     
     
     
+}
+
+- (void) moveToStart{
+    UIPanGestureRecognizer *recognizer = [[imageView gestureRecognizers] objectAtIndex:0];
+    [imageView removeGestureRecognizer:recognizer];
+    [super moveToStart];
+    
+    recognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(moveMalletFromGestureRecognizer:)];
+    [imageView addGestureRecognizer:recognizer];
+    //[imageView addGestureRecognizer:recon];
 }
 @end
