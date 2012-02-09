@@ -25,6 +25,7 @@
 		43E1C5DC14D08F120082C295 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43E1C5DA14D08F120082C295 /* ViewController.xib */; };
 		7805792B14E3088500C3BBF1 /* menu_bckgr.png in Resources */ = {isa = PBXBuildFile; fileRef = 7805792A14E3088500C3BBF1 /* menu_bckgr.png */; };
 		78A3017D14DEC02200BA6E98 /* PlayDisk.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A3017C14DEC02200BA6E98 /* PlayDisk.m */; };
+		78A3495F14E3EE60004C3A7F /* MenuMalletImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A3495E14E3EE60004C3A7F /* MenuMalletImage.m */; };
 		78A393B214E1A7B8000B31D7 /* PlayerMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A393B014E1A7B8000B31D7 /* PlayerMenuViewController.m */; };
 		78A393B314E1A7B8000B31D7 /* PlayerMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78A393B114E1A7B8000B31D7 /* PlayerMenuViewController.xib */; };
 		78AA1D8B14E1D33800608BD9 /* blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 78AA1D8614E1D33800608BD9 /* blue.png */; };
@@ -61,6 +62,8 @@
 		7805792A14E3088500C3BBF1 /* menu_bckgr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menu_bckgr.png; path = AirHockey/pics/menu_bckgr.png; sourceTree = "<group>"; };
 		78A3017B14DEC02200BA6E98 /* PlayDisk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayDisk.h; sourceTree = "<group>"; };
 		78A3017C14DEC02200BA6E98 /* PlayDisk.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayDisk.m; sourceTree = "<group>"; };
+		78A3495D14E3EE60004C3A7F /* MenuMalletImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuMalletImage.h; sourceTree = "<group>"; };
+		78A3495E14E3EE60004C3A7F /* MenuMalletImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuMalletImage.m; sourceTree = "<group>"; };
 		78A393AF14E1A7B8000B31D7 /* PlayerMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerMenuViewController.h; sourceTree = "<group>"; };
 		78A393B014E1A7B8000B31D7 /* PlayerMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerMenuViewController.m; sourceTree = "<group>"; };
 		78A393B114E1A7B8000B31D7 /* PlayerMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerMenuViewController.xib; sourceTree = "<group>"; };
@@ -131,6 +134,8 @@
 				78A393B014E1A7B8000B31D7 /* PlayerMenuViewController.m */,
 				43E1C5D714D08F120082C295 /* ViewController.h */,
 				43E1C5D814D08F120082C295 /* ViewController.m */,
+				78A3495D14E3EE60004C3A7F /* MenuMalletImage.h */,
+				78A3495E14E3EE60004C3A7F /* MenuMalletImage.m */,
 				43E1C5CC14D08F120082C295 /* Supporting Files */,
 			);
 			path = AirHockey;
@@ -257,6 +262,7 @@
 				43CE4F6314DEC8D00039C682 /* Mallet.m in Sources */,
 				438C9F8314DED094002F91C4 /* Puck.m in Sources */,
 				78A393B214E1A7B8000B31D7 /* PlayerMenuViewController.m in Sources */,
+				78A3495F14E3EE60004C3A7F /* MenuMalletImage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

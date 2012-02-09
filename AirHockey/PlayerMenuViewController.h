@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+UIImageView* malletOneChoice;
+UIImageView* malletTwoChoice;
+
+NSString* playerOneName;
+NSString* playerTwoName;
+
 @interface PlayerMenuViewController : UIViewController<UIGestureRecognizerDelegate> {
    
     IBOutlet UIImageView* malletOneBlue;
@@ -18,16 +24,13 @@
     IBOutlet UIImageView* malletTwoBlue;
     IBOutlet UIImageView* malletTwoRed;
     IBOutlet UIImageView* malletTwoGreen;
-    IBOutlet UIImageView* malletTwoYellow; 
+    IBOutlet UIImageView* malletTwoYellow;
+    
+    IBOutlet UITextField* namePlayerOne;
+    IBOutlet UITextField* namePlayerTwo;
 }
-
-@property(copy) NSString* playerOneName;
-@property(copy) NSString* playerTwoName;
 
 -(IBAction)showPlaygroundView;
 
 @end
-
-UIImageView* malletOneChoice;
-UIImageView* malletTwoChoice;
 
