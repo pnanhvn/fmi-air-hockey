@@ -25,6 +25,7 @@
     [super viewDidLoad];
     
     [firstPlayerMallet setImage:[malletOneChoice image]];
+    [secondPlayerMallet setImage:[malletTwoChoice image]];
     
     firstMalletDisk = [[Mallet alloc] initWithImageView:firstPlayerMallet andFieldSize:CGRectMake(0, midVertical, maxWidth, maxHeight - midVertical)];
     
