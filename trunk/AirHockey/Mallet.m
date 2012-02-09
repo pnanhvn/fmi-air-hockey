@@ -63,7 +63,7 @@
     [imageView removeGestureRecognizer:recognizer];
     [super moveToStart];
     
-    recognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(moveMalletFromGestureRecognizer:)];
+    recognizer = [[[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(moveMalletFromGestureRecognizer:)]autorelease];
     [imageView addGestureRecognizer:recognizer];
     //[imageView addGestureRecognizer:recon];
 }

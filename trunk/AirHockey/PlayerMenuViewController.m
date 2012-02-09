@@ -14,7 +14,7 @@
 
 -(IBAction)showPlaygroundView
 {
-    ViewController* playView = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
+    ViewController* playView = [[[ViewController alloc] initWithNibName:@"ViewController" bundle:nil]autorelease];
     playView.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     [self presentModalViewController:playView animated:YES];
 }
@@ -45,15 +45,15 @@
     malletTwoBlue.alpha = 0.5;
 
     
-    MenuMalletImage* redOne = [[MenuMalletImage alloc] initWithImageView:malletOneRed forPlayerOne:YES];
-    MenuMalletImage* greenOne = [[MenuMalletImage alloc] initWithImageView:malletOneGreen forPlayerOne:YES];
-    MenuMalletImage* blueOne = [[MenuMalletImage alloc] initWithImageView:malletOneBlue forPlayerOne:YES];
-    MenuMalletImage* yellowOne = [[MenuMalletImage alloc] initWithImageView:malletOneYellow forPlayerOne:YES];
+    redOne = [[MenuMalletImage alloc] initWithImageView:malletOneRed forPlayerOne:YES];
+    greenOne = [[MenuMalletImage alloc] initWithImageView:malletOneGreen forPlayerOne:YES];
+    blueOne = [[MenuMalletImage alloc] initWithImageView:malletOneBlue forPlayerOne:YES];
+    yellowOne = [[MenuMalletImage alloc] initWithImageView:malletOneYellow forPlayerOne:YES];
     
-    MenuMalletImage* redTwo = [[MenuMalletImage alloc] initWithImageView:malletTwoRed forPlayerOne:NO];
-    MenuMalletImage* greenTwo = [[MenuMalletImage alloc] initWithImageView:malletTwoGreen forPlayerOne:NO];
-    MenuMalletImage* blueTwo = [[MenuMalletImage alloc] initWithImageView:malletTwoBlue forPlayerOne:NO];
-    MenuMalletImage* yellowTwo = [[MenuMalletImage alloc] initWithImageView:malletTwoYellow forPlayerOne:NO];
+    redTwo = [[MenuMalletImage alloc] initWithImageView:malletTwoRed forPlayerOne:NO];
+    greenTwo = [[MenuMalletImage alloc] initWithImageView:malletTwoGreen forPlayerOne:NO];
+    blueTwo = [[MenuMalletImage alloc] initWithImageView:malletTwoBlue forPlayerOne:NO];
+    yellowTwo = [[MenuMalletImage alloc] initWithImageView:malletTwoYellow forPlayerOne:NO];
     
     
     UITapGestureRecognizer *tapOnRed = [[UITapGestureRecognizer alloc] initWithTarget:redOne action:@selector(selectedMallet:)];
@@ -73,20 +73,19 @@
     tapOnYellow.delegate = self;
     
     //Tap Gesture recognizers for player two
-    UITapGestureRecognizer *tapOnRed2 = [[UITapGestureRecognizer alloc] initWithTarget:redTwo
-action:@selector(selectedMallet:)];
+    UITapGestureRecognizer *tapOnRed2 =[[UITapGestureRecognizer alloc] initWithTarget:redTwo action:@selector(selectedMallet:)];
     [malletTwoRed addGestureRecognizer:tapOnRed2];
     tapOnRed2.delegate = self;
     
-    UITapGestureRecognizer *tapOnBlue2 = [[UITapGestureRecognizer alloc] initWithTarget:blueTwo action:@selector(selectedMallet:)];
+    UITapGestureRecognizer *tapOnBlue2 =[[UITapGestureRecognizer alloc] initWithTarget:blueTwo action:@selector(selectedMallet:)];
     [malletTwoBlue addGestureRecognizer:tapOnBlue2];
     tapOnBlue2.delegate = self;
     
-    UITapGestureRecognizer *tapOnGreen2 = [[UITapGestureRecognizer alloc] initWithTarget:greenTwo action:@selector(selectedMallet:)];
+    UITapGestureRecognizer *tapOnGreen2 =[[UITapGestureRecognizer alloc] initWithTarget:greenTwo action:@selector(selectedMallet:)];
     [malletTwoGreen addGestureRecognizer:tapOnGreen2];
     tapOnGreen2.delegate = self;
     
-    UITapGestureRecognizer *tapOnYellow2 = [[UITapGestureRecognizer alloc] initWithTarget:yellowTwo action:@selector(selectedMallet:)];
+    UITapGestureRecognizer *tapOnYellow2 =[[UITapGestureRecognizer alloc] initWithTarget:yellowTwo action:@selector(selectedMallet:)];
     [malletTwoYellow addGestureRecognizer:tapOnYellow2];
     tapOnYellow2.delegate = self;
 }
@@ -96,6 +95,14 @@ action:@selector(selectedMallet:)];
 - (void)viewDidUnload
 {
     [super viewDidUnload];
+    [redOne release];
+    [greenOne release];
+    [blueOne release];
+    [yellowOne release];
+    [redTwo release];
+    [greenTwo release];
+    [blueTwo release];
+    [yellowTwo release];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
