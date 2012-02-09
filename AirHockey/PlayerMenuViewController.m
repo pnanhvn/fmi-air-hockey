@@ -12,8 +12,6 @@
 
 @synthesize playerOneName = _playerOneName;
 @synthesize playerTwoName = _playerTwoName;
-@synthesize malletOneChoice = _malletOneChoice;
-@synthesize malletTwoChoice = _malletTwoChoice;
 
 -(IBAction)showPlaygroundView
 {
@@ -32,11 +30,8 @@
 }
 
 - (void)didReceiveMemoryWarning
-{
-    // Releases the view if it doesn't have a superview.
+{  
     [super didReceiveMemoryWarning];
-    
-    // Release any cached data, images, etc that aren't in use.
 }
 
 #pragma mark - View lifecycle
@@ -44,20 +39,40 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    UITapGestureRecognizer *tapOnRed = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(selectedMalletOneWithImage:)];
+    [malletOneRed addGestureRecognizer:tapOnRed];
+    tapOnRed.delegate = self;
+    
+//    UITapGestureRecognizer *tapOnBlue = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(selectedMalletOneWithImage:malletOneBlue:)];
+ //   [malletOneRed addGestureRecognizer:tapOnBlue];
+    
+ //   UITapGestureRecognizer *tapOnGreen = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(selectedMalletOneWithImage:malletOneGreen:)];
+ //   [malletOneGreen addGestureRecognizer:tapOnGreen];
+    
+  //  UITapGestureRecognizer *tapOnYellow = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(selectedMalletOneWithImage:malletOneYellow:)];
+  //  [malletOneYellow addGestureRecognizer:tapOnYellow];
+}
+
+-(void) selectedMalletOneWithImage:(UITapGestureRecognizer*) grec
+{
+ //   if(malletOneChoice != NULL){
+  //      [malletOneChoice release];
+  //      malletOneChoice = nil;
+ //   }
+   malletOneChoice = [[UIImageView alloc] initWithImage:[malletOneRed image]];
+    UIImage img = [[UIImage alloc] initWithContentsOfFile:<#(NSString *)#> ] 
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    return NO;
 }
+
+
 
 @end
