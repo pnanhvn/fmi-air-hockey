@@ -39,8 +39,11 @@
 {
     [super viewDidLoad];
     
-    malletOneChoice = [[UIImageView alloc] initWithImage:[malletOneGreen image]];
-    malletTwoChoice = [[UIImageView alloc] initWithImage:[malletTwoBlue image]];
+    malletOneChoice = malletOneGreen;
+    malletOneGreen.alpha = 0.5;
+    malletTwoChoice = malletTwoBlue;
+    malletTwoBlue.alpha = 0.5;
+
     
     MenuMalletImage* redOne = [[MenuMalletImage alloc] initWithImageView:malletOneRed forPlayerOne:YES];
     MenuMalletImage* greenOne = [[MenuMalletImage alloc] initWithImageView:malletOneGreen forPlayerOne:YES];

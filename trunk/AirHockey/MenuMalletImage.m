@@ -16,7 +16,6 @@
     if (self) {
         isForPlayerOne = isForPlayerOne_;
         selectedMallet = view;
-        
     }
     return self;
 }
@@ -25,11 +24,15 @@
 {
     if(isForPlayerOne)
     {
-        [malletOneChoice setImage: [selectedMallet image]];
+        malletOneChoice.alpha = 1.0;
+        malletOneChoice = selectedMallet;
+        malletOneChoice.alpha = 0.5;
     }
     else
     {
-        [malletTwoChoice setImage: [selectedMallet image]];
+        malletTwoChoice.alpha = 1.0;
+        malletTwoChoice = selectedMallet;
+        malletTwoChoice.alpha = 0.5;
     }
 }
 
