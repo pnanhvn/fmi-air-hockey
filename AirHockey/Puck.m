@@ -28,7 +28,7 @@
         
         self.angle = angle;
         self.speed += mullet.speed;
-        if(self.speed > 50.0) self.speed = 50.0;
+        if(self.speed > 20.0) self.speed = 20.0;
         
         
         NSLog(@"puck speed: %f mullet speed: %f", self.speed, mullet.speed);
@@ -85,7 +85,7 @@
     
     if(self.speed > 0.01) imageView.frame= CGRectMake(newX, newY, imageView.frame.size.width, imageView.frame.size.height);
     if (self.speed > 0) {
-        self.speed -= 0.3;  
+        self.speed -= 0.005*self.speed;  
     }
     else{
         self.speed = 0.0;

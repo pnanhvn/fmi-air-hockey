@@ -55,6 +55,7 @@
 }
 
 - (void) moveToPositionX: (double) x Y: (double) y{
+    self.speed = 5.0;
     [self moveAtCoordinatesX:x - self.radius Y:y - self.radius];
 }
 
