@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MenuMalletImage.h"
 
 UIImageView* malletOneChoice;
 UIImageView* malletTwoChoice;
@@ -15,7 +16,9 @@ NSString* playerOneName;
 NSString* playerTwoName;
 
 @interface PlayerMenuViewController : UIViewController<UIGestureRecognizerDelegate> {
-   
+    MenuMalletImage* redOne,* greenOne,* yellowOne,* blueOne;
+    MenuMalletImage* redTwo,* greenTwo,* yellowTwo,* blueTwo;    
+
     IBOutlet UIImageView* malletOneBlue;
     IBOutlet UIImageView* malletOneRed;
     IBOutlet UIImageView* malletOneGreen;
