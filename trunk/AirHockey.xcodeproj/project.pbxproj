@@ -38,6 +38,7 @@
 		78A3495F14E3EE60004C3A7F /* MenuMalletImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A3495E14E3EE60004C3A7F /* MenuMalletImage.m */; };
 		78A393B214E1A7B8000B31D7 /* PlayerMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A393B014E1A7B8000B31D7 /* PlayerMenuViewController.m */; };
 		78A393B314E1A7B8000B31D7 /* PlayerMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78A393B114E1A7B8000B31D7 /* PlayerMenuViewController.xib */; };
+		78A7207414E578EE00F86751 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 78A7207314E578EE00F86751 /* icon.png */; };
 		78AA1D8B14E1D33800608BD9 /* blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 78AA1D8614E1D33800608BD9 /* blue.png */; };
 		78AA1D8C14E1D33800608BD9 /* mallet_blue_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 78AA1D8714E1D33800608BD9 /* mallet_blue_selected.png */; };
 		78AA1D8D14E1D33800608BD9 /* mallet_green_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 78AA1D8814E1D33800608BD9 /* mallet_green_selected.png */; };
@@ -90,6 +91,7 @@
 		78A393AF14E1A7B8000B31D7 /* PlayerMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerMenuViewController.h; sourceTree = "<group>"; };
 		78A393B014E1A7B8000B31D7 /* PlayerMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerMenuViewController.m; sourceTree = "<group>"; };
 		78A393B114E1A7B8000B31D7 /* PlayerMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerMenuViewController.xib; sourceTree = "<group>"; };
+		78A7207314E578EE00F86751 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		78AA1D8614E1D33800608BD9 /* blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blue.png; path = AirHockey/pics/blue.png; sourceTree = "<group>"; };
 		78AA1D8714E1D33800608BD9 /* mallet_blue_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mallet_blue_selected.png; path = AirHockey/pics/mallet_blue_selected.png; sourceTree = "<group>"; };
 		78AA1D8814E1D33800608BD9 /* mallet_green_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mallet_green_selected.png; path = AirHockey/pics/mallet_green_selected.png; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 		78A393AD14E1A73F000B31D7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				78A7207314E578EE00F86751 /* icon.png */,
 				43E1C5D314D08F120082C295 /* AirHockey-Prefix.pch */,
 				78A393B114E1A7B8000B31D7 /* PlayerMenuViewController.xib */,
 				43E1C5DA14D08F120082C295 /* ViewController.xib */,
@@ -287,6 +290,7 @@
 				43E6DF7414E571C900E43BA8 /* 5.png in Resources */,
 				43E6DF7514E571C900E43BA8 /* 6.png in Resources */,
 				43E6DF7614E571C900E43BA8 /* 7.png in Resources */,
+				78A7207414E578EE00F86751 /* icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
