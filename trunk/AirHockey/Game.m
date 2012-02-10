@@ -7,6 +7,7 @@
 //
 
 #import "Game.h"
+#import "GameConstants.h"
 
 @implementation Game
 @synthesize malletOne = malletOne_;
@@ -72,7 +73,7 @@
     
     if(forFirstPlayer){
         firstPlayerPoints_++;
-        if(firstPlayerPoints_ >= 7) {
+        if(firstPlayerPoints_ >= MAX_POINTS) {
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"First player wins!"  message:nil delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
             [alert show];
             [alert release];
@@ -82,7 +83,7 @@
     }
     else{
         secondPlayerPoints_++;
-        if(secondPlayerPoints_ >= 7) {
+        if(secondPlayerPoints_ >= MAX_POINTS) {
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Second player wins!"  message:nil delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
             [alert show];
             [alert release];
