@@ -8,6 +8,7 @@
 
 #import "Puck.h"
 #include "math.h"
+#include "GameConstants.h"
 
 
 @implementation Puck
@@ -19,6 +20,8 @@
     return self;
 }
 
+
+
 - (Boolean) checkForCollisionsWithMullet:(PlayDisk *)mullet{
     double hypotenuseForMalletOne = sqrt(pow([self getCenter].x - [mullet getCenter].x, 2) + pow([self getCenter].y - [mullet getCenter].y, 2));
     if ((self.radius + mullet.radius) >= hypotenuseForMalletOne){
@@ -28,11 +31,10 @@
         
         self.angle = angle;
         self.speed += mullet.speed;
-        if(self.speed > 20.0) self.speed = 20.0;
+        if(self.speed > MAX_SPEED) self.speed = MAX_SPEED;
         
         
         NSLog(@"puck speed: %f mullet speed: %f", self.speed, mullet.speed);
-        //self.speed = 20;
         mullet.speed = 0;
         
         return true;
@@ -51,7 +53,9 @@
     }
     
     if(imageView.frame.origin.y < maxFieldSize.origin.y || imageView.frame.origin.y + 2 * self.radius> maxFieldSize.origin.y  + maxFieldSize.size.height){
-        if(imageView.frame.origin.x > 200 && imageView.frame.origin.x < 568){
+        int wallsToGoalDistance = (maxFieldSize.size.width - GOAL_SIZE) / 2;
+        NSLog(@"Goals is from %f to %f", wallsToGoalDistance + maxFieldSize.origin.x, maxFieldSize.size.width - wallsToGoalDistance  + maxFieldSize.origin.x);
+        if(imageView.frame.origin.x > wallsToGoalDistance + maxFieldSize.origin.x && imageView.frame.origin.x < maxFieldSize.size.width - wallsToGoalDistance  + maxFieldSize.origin.x){
             self.speed = 0.0;
             self.angle = 0.0;
            
@@ -78,14 +82,14 @@
     double newX = imageView.frame.origin.x + self.speed * cos(self.angle);
     double newY = imageView.frame.origin.y + self.speed * sin(self.angle);
     
-    if(newX < maxFieldSize.origin.x - 100) newX = maxFieldSize.origin.x;
-    if(newX +  2 * self.radius > maxFieldSize.origin.x + maxFieldSize.size.width + 100) newX = maxFieldSize.origin.x + maxFieldSize.size.width;
-    if(newY < maxFieldSize.origin.y - 100) newY = maxFieldSize.origin.y;
-    if(newY + 2 * self.radius > maxFieldSize.origin.y + maxFieldSize.size.height + 100) newY = maxFieldSize.origin.y + maxFieldSize.size.height;
+    if(newX < maxFieldSize.origin.x - PUCK_OUTSIDE_OF_GAME_AREA_TOLERANCE) newX = maxFieldSize.origin.x;
+    if(newX +  2 * self.radius > maxFieldSize.origin.x + maxFieldSize.size.width + PUCK_OUTSIDE_OF_GAME_AREA_TOLERANCE) newX = maxFieldSize.origin.x + maxFieldSize.size.width;
+    if(newY < maxFieldSize.origin.y - PUCK_OUTSIDE_OF_GAME_AREA_TOLERANCE) newY = maxFieldSize.origin.y;
+    if(newY + 2 * self.radius > maxFieldSize.origin.y + maxFieldSize.size.height + PUCK_OUTSIDE_OF_GAME_AREA_TOLERANCE) newY = maxFieldSize.origin.y + maxFieldSize.size.height;
     
-    if(self.speed > 0.01) imageView.frame= CGRectMake(newX, newY, imageView.frame.size.width, imageView.frame.size.height);
-    if (self.speed > 0) {
-        self.speed -= 0.005*self.speed;  
+    if (self.speed > MIN_SPEED) {
+        imageView.frame= CGRectMake(newX, newY, imageView.frame.size.width, imageView.frame.size.height);
+        self.speed -= FRICTION_PERCENTAGE*self.speed;  
     }
     else{
         self.speed = 0.0;

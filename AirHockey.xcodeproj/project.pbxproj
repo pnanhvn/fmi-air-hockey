@@ -36,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		430DDBEA14E561F600C99D0B /* GameConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameConstants.h; sourceTree = "<group>"; };
 		438C9F8114DED094002F91C4 /* Puck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Puck.h; sourceTree = "<group>"; };
 		438C9F8214DED094002F91C4 /* Puck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Puck.m; sourceTree = "<group>"; };
 		43A12DAD14D0AD2900085A7B /* field.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = field.png; path = AirHockey/pics/field.png; sourceTree = "<group>"; };
@@ -67,7 +68,6 @@
 		78A393AF14E1A7B8000B31D7 /* PlayerMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerMenuViewController.h; sourceTree = "<group>"; };
 		78A393B014E1A7B8000B31D7 /* PlayerMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerMenuViewController.m; sourceTree = "<group>"; };
 		78A393B114E1A7B8000B31D7 /* PlayerMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerMenuViewController.xib; sourceTree = "<group>"; };
-		78A4E61F14D2B00700285CC7 /* ScreenConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScreenConstants.h; path = ../ScreenConstants.h; sourceTree = "<group>"; };
 		78AA1D8614E1D33800608BD9 /* blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blue.png; path = AirHockey/pics/blue.png; sourceTree = "<group>"; };
 		78AA1D8714E1D33800608BD9 /* mallet_blue_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mallet_blue_selected.png; path = AirHockey/pics/mallet_blue_selected.png; sourceTree = "<group>"; };
 		78AA1D8814E1D33800608BD9 /* mallet_green_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mallet_green_selected.png; path = AirHockey/pics/mallet_green_selected.png; sourceTree = "<group>"; };
@@ -127,7 +127,6 @@
 				438C9F8214DED094002F91C4 /* Puck.m */,
 				78A3017B14DEC02200BA6E98 /* PlayDisk.h */,
 				78A3017C14DEC02200BA6E98 /* PlayDisk.m */,
-				78A4E61F14D2B00700285CC7 /* ScreenConstants.h */,
 				43E1C5D414D08F120082C295 /* AppDelegate.h */,
 				43E1C5D514D08F120082C295 /* AppDelegate.m */,
 				78A393AF14E1A7B8000B31D7 /* PlayerMenuViewController.h */,
@@ -137,6 +136,7 @@
 				78A3495D14E3EE60004C3A7F /* MenuMalletImage.h */,
 				78A3495E14E3EE60004C3A7F /* MenuMalletImage.m */,
 				43E1C5CC14D08F120082C295 /* Supporting Files */,
+				430DDBEA14E561F600C99D0B /* GameConstants.h */,
 			);
 			path = AirHockey;
 			sourceTree = "<group>";
