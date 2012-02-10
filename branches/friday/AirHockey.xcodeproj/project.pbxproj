@@ -1,0 +1,420 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		430DDBED14E5679100C99D0B /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 430DDBEC14E5679100C99D0B /* Game.m */; };
+		438C9F8314DED094002F91C4 /* Puck.m in Sources */ = {isa = PBXBuildFile; fileRef = 438C9F8214DED094002F91C4 /* Puck.m */; };
+		4394C79614E57AA300997F3C /* 0.png in Resources */ = {isa = PBXBuildFile; fileRef = 4394C78E14E57AA300997F3C /* 0.png */; };
+		4394C79714E57AA300997F3C /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4394C78F14E57AA300997F3C /* 1.png */; };
+		4394C79814E57AA300997F3C /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4394C79014E57AA300997F3C /* 2.png */; };
+		4394C79914E57AA300997F3C /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 4394C79114E57AA300997F3C /* 3.png */; };
+		4394C79A14E57AA300997F3C /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 4394C79214E57AA300997F3C /* 4.png */; };
+		4394C79B14E57AA300997F3C /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = 4394C79314E57AA300997F3C /* 5.png */; };
+		4394C79C14E57AA300997F3C /* 6.png in Resources */ = {isa = PBXBuildFile; fileRef = 4394C79414E57AA300997F3C /* 6.png */; };
+		4394C79D14E57AA300997F3C /* 7.png in Resources */ = {isa = PBXBuildFile; fileRef = 4394C79514E57AA300997F3C /* 7.png */; };
+		43A12DB314D0AD2900085A7B /* field.png in Resources */ = {isa = PBXBuildFile; fileRef = 43A12DAD14D0AD2900085A7B /* field.png */; };
+		43A12DB414D0AD2900085A7B /* mallet_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 43A12DAE14D0AD2900085A7B /* mallet_blue.png */; };
+		43A12DB514D0AD2900085A7B /* mallet_green.png in Resources */ = {isa = PBXBuildFile; fileRef = 43A12DAF14D0AD2900085A7B /* mallet_green.png */; };
+		43A12DB614D0AD2900085A7B /* mallet_red.png in Resources */ = {isa = PBXBuildFile; fileRef = 43A12DB014D0AD2900085A7B /* mallet_red.png */; };
+		43A12DB714D0AD2900085A7B /* mallet_yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 43A12DB114D0AD2900085A7B /* mallet_yellow.png */; };
+		43A12DB814D0AD2900085A7B /* puck.png in Resources */ = {isa = PBXBuildFile; fileRef = 43A12DB214D0AD2900085A7B /* puck.png */; };
+		43CE4F6314DEC8D00039C682 /* Mallet.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CE4F6214DEC8D00039C682 /* Mallet.m */; };
+		43E1C5C614D08F120082C295 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43E1C5C514D08F120082C295 /* UIKit.framework */; };
+		43E1C5C814D08F120082C295 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43E1C5C714D08F120082C295 /* Foundation.framework */; };
+		43E1C5CA14D08F120082C295 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43E1C5C914D08F120082C295 /* CoreGraphics.framework */; };
+		43E1C5D014D08F120082C295 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 43E1C5CE14D08F120082C295 /* InfoPlist.strings */; };
+		43E1C5D214D08F120082C295 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 43E1C5D114D08F120082C295 /* main.m */; };
+		43E1C5D614D08F120082C295 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 43E1C5D514D08F120082C295 /* AppDelegate.m */; };
+		43E1C5D914D08F120082C295 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43E1C5D814D08F120082C295 /* ViewController.m */; };
+		43E1C5DC14D08F120082C295 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43E1C5DA14D08F120082C295 /* ViewController.xib */; };
+		43E6DF7914E5723500E43BA8 /* PointsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 43E6DF7814E5723500E43BA8 /* PointsView.m */; };
+		7805792B14E3088500C3BBF1 /* menu_bckgr.png in Resources */ = {isa = PBXBuildFile; fileRef = 7805792A14E3088500C3BBF1 /* menu_bckgr.png */; };
+		7853AA1614E581F800444EB1 /* icon72.png in Resources */ = {isa = PBXBuildFile; fileRef = 7853AA1514E581F800444EB1 /* icon72.png */; };
+		78A3017D14DEC02200BA6E98 /* PlayDisk.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A3017C14DEC02200BA6E98 /* PlayDisk.m */; };
+		78A3495F14E3EE60004C3A7F /* MenuMalletImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A3495E14E3EE60004C3A7F /* MenuMalletImage.m */; };
+		78A393B214E1A7B8000B31D7 /* PlayerMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A393B014E1A7B8000B31D7 /* PlayerMenuViewController.m */; };
+		78A393B314E1A7B8000B31D7 /* PlayerMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78A393B114E1A7B8000B31D7 /* PlayerMenuViewController.xib */; };
+		78A7207414E578EE00F86751 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 78A7207314E578EE00F86751 /* icon.png */; };
+		78AA1D8B14E1D33800608BD9 /* blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 78AA1D8614E1D33800608BD9 /* blue.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		430DDBEA14E561F600C99D0B /* GameConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameConstants.h; sourceTree = "<group>"; };
+		430DDBEB14E5679100C99D0B /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		430DDBEC14E5679100C99D0B /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
+		438C9F8114DED094002F91C4 /* Puck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Puck.h; sourceTree = "<group>"; };
+		438C9F8214DED094002F91C4 /* Puck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Puck.m; sourceTree = "<group>"; };
+		4394C78E14E57AA300997F3C /* 0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 0.png; path = AirHockey/pics/0.png; sourceTree = "<group>"; };
+		4394C78F14E57AA300997F3C /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1.png; path = AirHockey/pics/1.png; sourceTree = "<group>"; };
+		4394C79014E57AA300997F3C /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 2.png; path = AirHockey/pics/2.png; sourceTree = "<group>"; };
+		4394C79114E57AA300997F3C /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 3.png; path = AirHockey/pics/3.png; sourceTree = "<group>"; };
+		4394C79214E57AA300997F3C /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 4.png; path = AirHockey/pics/4.png; sourceTree = "<group>"; };
+		4394C79314E57AA300997F3C /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 5.png; path = AirHockey/pics/5.png; sourceTree = "<group>"; };
+		4394C79414E57AA300997F3C /* 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 6.png; path = AirHockey/pics/6.png; sourceTree = "<group>"; };
+		4394C79514E57AA300997F3C /* 7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 7.png; path = AirHockey/pics/7.png; sourceTree = "<group>"; };
+		43A12DAD14D0AD2900085A7B /* field.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = field.png; path = AirHockey/pics/field.png; sourceTree = "<group>"; };
+		43A12DAE14D0AD2900085A7B /* mallet_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mallet_blue.png; path = AirHockey/pics/mallet_blue.png; sourceTree = "<group>"; };
+		43A12DAF14D0AD2900085A7B /* mallet_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mallet_green.png; path = AirHockey/pics/mallet_green.png; sourceTree = "<group>"; };
+		43A12DB014D0AD2900085A7B /* mallet_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mallet_red.png; path = AirHockey/pics/mallet_red.png; sourceTree = "<group>"; };
+		43A12DB114D0AD2900085A7B /* mallet_yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mallet_yellow.png; path = AirHockey/pics/mallet_yellow.png; sourceTree = "<group>"; };
+		43A12DB214D0AD2900085A7B /* puck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = puck.png; path = AirHockey/pics/puck.png; sourceTree = "<group>"; };
+		43CE4F6114DEC8D00039C682 /* Mallet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mallet.h; sourceTree = "<group>"; };
+		43CE4F6214DEC8D00039C682 /* Mallet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mallet.m; sourceTree = "<group>"; };
+		43E1C5C114D08F120082C295 /* AirHockey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirHockey.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		43E1C5C514D08F120082C295 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		43E1C5C714D08F120082C295 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		43E1C5C914D08F120082C295 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		43E1C5CD14D08F120082C295 /* AirHockey-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AirHockey-Info.plist"; sourceTree = "<group>"; };
+		43E1C5CF14D08F120082C295 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		43E1C5D114D08F120082C295 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		43E1C5D314D08F120082C295 /* AirHockey-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AirHockey-Prefix.pch"; sourceTree = "<group>"; };
+		43E1C5D414D08F120082C295 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		43E1C5D514D08F120082C295 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		43E1C5D714D08F120082C295 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		43E1C5D814D08F120082C295 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		43E1C5DB14D08F120082C295 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		43E6DF7714E5723500E43BA8 /* PointsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointsView.h; sourceTree = "<group>"; };
+		43E6DF7814E5723500E43BA8 /* PointsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointsView.m; sourceTree = "<group>"; };
+		7805792A14E3088500C3BBF1 /* menu_bckgr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menu_bckgr.png; path = AirHockey/pics/menu_bckgr.png; sourceTree = "<group>"; };
+		7853AA1514E581F800444EB1 /* icon72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon72.png; sourceTree = "<group>"; };
+		78A3017B14DEC02200BA6E98 /* PlayDisk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayDisk.h; sourceTree = "<group>"; };
+		78A3017C14DEC02200BA6E98 /* PlayDisk.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayDisk.m; sourceTree = "<group>"; };
+		78A3495D14E3EE60004C3A7F /* MenuMalletImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuMalletImage.h; sourceTree = "<group>"; };
+		78A3495E14E3EE60004C3A7F /* MenuMalletImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuMalletImage.m; sourceTree = "<group>"; };
+		78A393AF14E1A7B8000B31D7 /* PlayerMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerMenuViewController.h; sourceTree = "<group>"; };
+		78A393B014E1A7B8000B31D7 /* PlayerMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerMenuViewController.m; sourceTree = "<group>"; };
+		78A393B114E1A7B8000B31D7 /* PlayerMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerMenuViewController.xib; sourceTree = "<group>"; };
+		78A7207314E578EE00F86751 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		78AA1D8614E1D33800608BD9 /* blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blue.png; path = AirHockey/pics/blue.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		43E1C5BE14D08F120082C295 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43E1C5C614D08F120082C295 /* UIKit.framework in Frameworks */,
+				43E1C5C814D08F120082C295 /* Foundation.framework in Frameworks */,
+				43E1C5CA14D08F120082C295 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		43E1C5B614D08F120082C295 = {
+			isa = PBXGroup;
+			children = (
+				78A4B1EF14D0AABA003E8B92 /* imgs */,
+				43E1C5CB14D08F120082C295 /* AirHockey */,
+				43E1C5C414D08F120082C295 /* Frameworks */,
+				43E1C5C214D08F120082C295 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		43E1C5C214D08F120082C295 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				43E1C5C114D08F120082C295 /* AirHockey.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		43E1C5C414D08F120082C295 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				43E1C5C514D08F120082C295 /* UIKit.framework */,
+				43E1C5C714D08F120082C295 /* Foundation.framework */,
+				43E1C5C914D08F120082C295 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		43E1C5CB14D08F120082C295 /* AirHockey */ = {
+			isa = PBXGroup;
+			children = (
+				78A393AD14E1A73F000B31D7 /* Resources */,
+				43CE4F6114DEC8D00039C682 /* Mallet.h */,
+				43CE4F6214DEC8D00039C682 /* Mallet.m */,
+				438C9F8114DED094002F91C4 /* Puck.h */,
+				438C9F8214DED094002F91C4 /* Puck.m */,
+				78A3017B14DEC02200BA6E98 /* PlayDisk.h */,
+				78A3017C14DEC02200BA6E98 /* PlayDisk.m */,
+				43E1C5D414D08F120082C295 /* AppDelegate.h */,
+				43E1C5D514D08F120082C295 /* AppDelegate.m */,
+				78A393AF14E1A7B8000B31D7 /* PlayerMenuViewController.h */,
+				78A393B014E1A7B8000B31D7 /* PlayerMenuViewController.m */,
+				43E1C5D714D08F120082C295 /* ViewController.h */,
+				43E1C5D814D08F120082C295 /* ViewController.m */,
+				78A3495D14E3EE60004C3A7F /* MenuMalletImage.h */,
+				78A3495E14E3EE60004C3A7F /* MenuMalletImage.m */,
+				43E1C5CC14D08F120082C295 /* Supporting Files */,
+				430DDBEA14E561F600C99D0B /* GameConstants.h */,
+				430DDBEB14E5679100C99D0B /* Game.h */,
+				430DDBEC14E5679100C99D0B /* Game.m */,
+				43E6DF7714E5723500E43BA8 /* PointsView.h */,
+				43E6DF7814E5723500E43BA8 /* PointsView.m */,
+			);
+			path = AirHockey;
+			sourceTree = "<group>";
+		};
+		43E1C5CC14D08F120082C295 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				43E1C5CD14D08F120082C295 /* AirHockey-Info.plist */,
+				43E1C5CE14D08F120082C295 /* InfoPlist.strings */,
+				43E1C5D114D08F120082C295 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		78A393AD14E1A73F000B31D7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7853AA1514E581F800444EB1 /* icon72.png */,
+				78A7207314E578EE00F86751 /* icon.png */,
+				43E1C5D314D08F120082C295 /* AirHockey-Prefix.pch */,
+				78A393B114E1A7B8000B31D7 /* PlayerMenuViewController.xib */,
+				43E1C5DA14D08F120082C295 /* ViewController.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		78A4B1EF14D0AABA003E8B92 /* imgs */ = {
+			isa = PBXGroup;
+			children = (
+				4394C78E14E57AA300997F3C /* 0.png */,
+				4394C78F14E57AA300997F3C /* 1.png */,
+				4394C79014E57AA300997F3C /* 2.png */,
+				4394C79114E57AA300997F3C /* 3.png */,
+				4394C79214E57AA300997F3C /* 4.png */,
+				4394C79314E57AA300997F3C /* 5.png */,
+				4394C79414E57AA300997F3C /* 6.png */,
+				4394C79514E57AA300997F3C /* 7.png */,
+				7805792A14E3088500C3BBF1 /* menu_bckgr.png */,
+				78AA1D8614E1D33800608BD9 /* blue.png */,
+				43A12DAD14D0AD2900085A7B /* field.png */,
+				43A12DAE14D0AD2900085A7B /* mallet_blue.png */,
+				43A12DAF14D0AD2900085A7B /* mallet_green.png */,
+				43A12DB014D0AD2900085A7B /* mallet_red.png */,
+				43A12DB114D0AD2900085A7B /* mallet_yellow.png */,
+				43A12DB214D0AD2900085A7B /* puck.png */,
+			);
+			name = imgs;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		43E1C5C014D08F120082C295 /* AirHockey */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43E1C5DF14D08F120082C295 /* Build configuration list for PBXNativeTarget "AirHockey" */;
+			buildPhases = (
+				43E1C5BD14D08F120082C295 /* Sources */,
+				43E1C5BE14D08F120082C295 /* Frameworks */,
+				43E1C5BF14D08F120082C295 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AirHockey;
+			productName = AirHockey;
+			productReference = 43E1C5C114D08F120082C295 /* AirHockey.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		43E1C5B814D08F120082C295 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 43E1C5BB14D08F120082C295 /* Build configuration list for PBXProject "AirHockey" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 43E1C5B614D08F120082C295;
+			productRefGroup = 43E1C5C214D08F120082C295 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				43E1C5C014D08F120082C295 /* AirHockey */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		43E1C5BF14D08F120082C295 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43E1C5D014D08F120082C295 /* InfoPlist.strings in Resources */,
+				43E1C5DC14D08F120082C295 /* ViewController.xib in Resources */,
+				43A12DB314D0AD2900085A7B /* field.png in Resources */,
+				43A12DB414D0AD2900085A7B /* mallet_blue.png in Resources */,
+				43A12DB514D0AD2900085A7B /* mallet_green.png in Resources */,
+				43A12DB614D0AD2900085A7B /* mallet_red.png in Resources */,
+				43A12DB714D0AD2900085A7B /* mallet_yellow.png in Resources */,
+				43A12DB814D0AD2900085A7B /* puck.png in Resources */,
+				78A393B314E1A7B8000B31D7 /* PlayerMenuViewController.xib in Resources */,
+				78AA1D8B14E1D33800608BD9 /* blue.png in Resources */,
+				7805792B14E3088500C3BBF1 /* menu_bckgr.png in Resources */,
+				78A7207414E578EE00F86751 /* icon.png in Resources */,
+				4394C79614E57AA300997F3C /* 0.png in Resources */,
+				4394C79714E57AA300997F3C /* 1.png in Resources */,
+				4394C79814E57AA300997F3C /* 2.png in Resources */,
+				4394C79914E57AA300997F3C /* 3.png in Resources */,
+				4394C79A14E57AA300997F3C /* 4.png in Resources */,
+				4394C79B14E57AA300997F3C /* 5.png in Resources */,
+				4394C79C14E57AA300997F3C /* 6.png in Resources */,
+				4394C79D14E57AA300997F3C /* 7.png in Resources */,
+				7853AA1614E581F800444EB1 /* icon72.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		43E1C5BD14D08F120082C295 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43E1C5D214D08F120082C295 /* main.m in Sources */,
+				43E1C5D614D08F120082C295 /* AppDelegate.m in Sources */,
+				43E1C5D914D08F120082C295 /* ViewController.m in Sources */,
+				78A3017D14DEC02200BA6E98 /* PlayDisk.m in Sources */,
+				43CE4F6314DEC8D00039C682 /* Mallet.m in Sources */,
+				438C9F8314DED094002F91C4 /* Puck.m in Sources */,
+				78A393B214E1A7B8000B31D7 /* PlayerMenuViewController.m in Sources */,
+				78A3495F14E3EE60004C3A7F /* MenuMalletImage.m in Sources */,
+				430DDBED14E5679100C99D0B /* Game.m in Sources */,
+				43E6DF7914E5723500E43BA8 /* PointsView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		43E1C5CE14D08F120082C295 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				43E1C5CF14D08F120082C295 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		43E1C5DA14D08F120082C295 /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				43E1C5DB14D08F120082C295 /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		43E1C5DD14D08F120082C295 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		43E1C5DE14D08F120082C295 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		43E1C5E014D08F120082C295 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AirHockey/AirHockey-Prefix.pch";
+				INFOPLIST_FILE = "AirHockey/AirHockey-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		43E1C5E114D08F120082C295 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AirHockey/AirHockey-Prefix.pch";
+				INFOPLIST_FILE = "AirHockey/AirHockey-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		43E1C5BB14D08F120082C295 /* Build configuration list for PBXProject "AirHockey" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43E1C5DD14D08F120082C295 /* Debug */,
+				43E1C5DE14D08F120082C295 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43E1C5DF14D08F120082C295 /* Build configuration list for PBXNativeTarget "AirHockey" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43E1C5E014D08F120082C295 /* Debug */,
+				43E1C5E114D08F120082C295 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 43E1C5B814D08F120082C295 /* Project object */;
+}
