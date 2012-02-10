@@ -44,8 +44,7 @@
     else{
         self.speed = ((abs([sender velocityInView:imageView.superview].x) + abs([sender velocityInView:imageView.superview].y))/PUCK_TO_GESTURE_SPEED_RATIO);
     }
-    //NSLog(@"%f,%f", [sender velocityInView:imageView.superview].x, [sender velocityInView:imageView.superview].y);
-    
+
     CGPoint newLocation = [sender translationInView:imageView.superview];
     double X = xAtGestureBegin + newLocation.x;
     double Y = yAtGestureBegin + newLocation.y;
@@ -67,6 +66,5 @@
     
     recognizer = [[[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(moveMalletFromGestureRecognizer:)]autorelease];
     [imageView addGestureRecognizer:recognizer];
-    //[imageView addGestureRecognizer:recon];
 }
 @end
