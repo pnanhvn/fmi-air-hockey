@@ -8,7 +8,6 @@
 
 #import "ViewController.h"
 #import "PlayerMenuViewController.h"
-#import "ScreenConstants.h"
 	
 @implementation ViewController
 
@@ -27,6 +26,10 @@
     [firstPlayerMallet setImage:[malletOneChoice image]];
     [secondPlayerMallet setImage:[malletTwoChoice image]];
     
+    int maxWidth = self.view.frame.size.width;
+    int maxHeight = self.view.frame.size.height;
+    midVertical = maxHeight / 2;
+    
     firstMalletDisk = [[Mallet alloc] initWithImageView:firstPlayerMallet andFieldSize:CGRectMake(0, midVertical, maxWidth, maxHeight - midVertical)];
     
     secondMalletDisk = [[Mallet alloc] initWithImageView:secondPlayerMallet andFieldSize:CGRectMake(0, 0, maxWidth, midVertical)];
@@ -44,7 +47,7 @@
 - (void) moveMalletOnTap: (UITapGestureRecognizer *) recognizer{
     CGPoint location = [recognizer locationInView:self.view];
     NSLog(@"%f", location.y);
-    if(location.y > maxHeight / 2 ){
+    if(location.y > midVertical ){
         [firstMalletDisk moveToPositionX:location.x Y:location.y];
     }
     else{

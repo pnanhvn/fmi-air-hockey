@@ -7,6 +7,7 @@
 //
 
 #import "Mallet.h"
+#include "GameConstants.h"
 
 @implementation Mallet
 
@@ -41,7 +42,7 @@
         self.speed = 0;
     }
     else{
-        self.speed = ((abs([sender velocityInView:imageView.superview].x) + abs([sender velocityInView:imageView.superview].y))/100);
+        self.speed = ((abs([sender velocityInView:imageView.superview].x) + abs([sender velocityInView:imageView.superview].y))/PUCK_TO_GESTURE_SPEED_RATIO);
     }
     //NSLog(@"%f,%f", [sender velocityInView:imageView.superview].x, [sender velocityInView:imageView.superview].y);
     
@@ -55,7 +56,7 @@
 }
 
 - (void) moveToPositionX: (double) x Y: (double) y{
-    self.speed = 5.0;
+    self.speed = SPEED_ON_TAP;
     [self moveAtCoordinatesX:x - self.radius Y:y - self.radius];
 }
 
