@@ -7,10 +7,13 @@
 //
 
 #import "PlayDisk.h"
+@class Game;
 
 @interface Puck : PlayDisk{
     Boolean hitAWall;
 }
 - (void) moveForElapsedTime: (double) elapsedTime;
-- (void) checkForCollisionsWithMulletOne: (PlayDisk*) mulletOne andMulletTwo: (PlayDisk*) mulletTwo;
+- (void) checkForCollisionsWithMalletOne: (PlayDisk*) malletOne andMalletTwo: (PlayDisk*) malletTwo;
+
+@property(assign) Game* game;
 @end

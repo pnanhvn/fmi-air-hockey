@@ -8,18 +8,18 @@
 
 #import <UIKit/UIKit.h>
 #import "PlayDisk.h"
-#import "Mallet.h"
-#import "Puck.h"
+#import "Game.h"
 
 @interface ViewController : UIViewController<UIGestureRecognizerDelegate>{
     
     IBOutlet UIImageView *puck;
-    IBOutlet UIImageView *secondPlayerMallet;
+
     IBOutlet UIImageView *firstPlayerMallet;
-    Puck *puckDisk;
-    Mallet *firstMalletDisk, *secondMalletDisk;
+    IBOutlet PointsView *firstPlayerPointsView;
+    IBOutlet PointsView *secondPlayerPointsView;
+    IBOutlet UIImageView *secondPlayerMallet;
     
-    int midVertical;
+    Game* game;
 
 }
 

@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import "PlayerMenuViewController.h"
+#import "Mallet.h"
+#import "Puck.h"
 	
 @implementation ViewController
 
@@ -28,16 +30,27 @@
     
     int maxWidth = self.view.frame.size.width;
     int maxHeight = self.view.frame.size.height;
-    midVertical = maxHeight / 2;
+    int midVertical = maxHeight / 2;
     
-    firstMalletDisk = [[Mallet alloc] initWithImageView:firstPlayerMallet andFieldSize:CGRectMake(0, midVertical, maxWidth, maxHeight - midVertical)];
     
-    secondMalletDisk = [[Mallet alloc] initWithImageView:secondPlayerMallet andFieldSize:CGRectMake(0, 0, maxWidth, midVertical)];
     
-    puckDisk = [[Puck alloc] initWithImageView:puck andFieldSize:CGRectMake(0, 0, maxWidth, maxHeight)];
+    Mallet *firstMalletDisk = [[Mallet alloc] initWithImageView:firstPlayerMallet andFieldSize:CGRectMake(0, midVertical, maxWidth, maxHeight - midVertical)];
     
+    Mallet *secondMalletDisk = [[Mallet alloc] initWithImageView:secondPlayerMallet andFieldSize:CGRectMake(0, 0, maxWidth, midVertical)];
+    
+    Puck *puckDisk = [[Puck alloc] initWithImageView:puck andFieldSize:CGRectMake(0, 0, maxWidth, maxHeight)];
+    
+    game = [[Game alloc] initWithMalletOne:firstMalletDisk malletTwo:secondMalletDisk puck:puckDisk fieldSize: CGRectMake(0, 0, maxWidth, maxHeight)];
+    [firstMalletDisk release];
+    [secondMalletDisk release];
+    [puckDisk release];
+    
+    game.firstPlayerPointsView = firstPlayerPointsView;
+    game.secondPlayerPointsView = secondPlayerPointsView;
+    [game resetGame];
  
-    [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(movePuck) userInfo:nil repeats:YES];
+    [NSTimer scheduledTimerWithTimeInterval:0.01 target:game selector:@selector(timeElapsed) userInfo:nil repeats:YES];
+    
     UITapGestureRecognizer *recon = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(moveMalletOnTap:)];
     recon.delegate = self;
     [self.view addGestureRecognizer:recon];
@@ -46,20 +59,9 @@
 
 - (void) moveMalletOnTap: (UITapGestureRecognizer *) recognizer{
     CGPoint location = [recognizer locationInView:self.view];
-    NSLog(@"%f", location.y);
-    if(location.y > midVertical ){
-        [firstMalletDisk moveToPositionX:location.x Y:location.y];
-    }
-    else{
-        [secondMalletDisk moveToPositionX:location.x Y:location.y];
-    }
+    [game tapOnGameScreenLocation:location];
 }
 
-- (void) movePuck {
-
-    [puckDisk checkForCollisionsWithMulletOne:firstMalletDisk andMulletTwo:secondMalletDisk];
-    [puckDisk moveForElapsedTime: 0.1];
-}
 
 - (BOOL) gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer{
     return YES;
@@ -78,6 +80,10 @@
     firstPlayerMallet = nil;
     [secondPlayerMallet release];
     secondPlayerMallet = nil;
+    [firstPlayerPointsView release];
+    firstPlayerPointsView = nil;
+    [secondPlayerPointsView release];
+    secondPlayerPointsView = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -114,6 +120,8 @@
     [puck release];
     [firstPlayerMallet release];
     [secondPlayerMallet release];
+    [firstPlayerPointsView release];
+    [secondPlayerPointsView release];
     [super dealloc];
 }
 @end
