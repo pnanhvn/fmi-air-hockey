@@ -49,7 +49,7 @@
     game.secondPlayerPointsView = secondPlayerPointsView;
     [game resetGame];
  
-    [NSTimer scheduledTimerWithTimeInterval:0.01 target:game selector:@selector(timeElapsed) userInfo:nil repeats:YES];
+    timer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:game selector:@selector(timeElapsed) userInfo:nil repeats:YES];
     
     UITapGestureRecognizer *pauseTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(goToPlayerMenu:)];
     [pauseImg addGestureRecognizer:pauseTap];
@@ -75,6 +75,7 @@
 
 -(IBAction)goToPlayerMenu:(UITapGestureRecognizer*) grec
 {
+    game.pause = YES;
     [self dismissModalViewControllerAnimated:YES];
 }
 
