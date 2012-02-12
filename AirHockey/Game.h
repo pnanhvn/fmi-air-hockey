@@ -28,6 +28,7 @@
 @property(retain) Mallet* malletTwo;
 @property(retain) PointsView* firstPlayerPointsView;
 @property(retain) PointsView* secondPlayerPointsView;
+@property BOOL pause;
 
 
 @end

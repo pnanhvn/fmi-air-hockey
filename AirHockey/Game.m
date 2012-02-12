@@ -15,6 +15,7 @@
 @synthesize puck = puck_;
 @synthesize firstPlayerPointsView;
 @synthesize secondPlayerPointsView;
+@synthesize pause =_pause;
 
 - (void) showPoints{
     [firstPlayerPointsView showPoints:firstPlayerPoints_];
@@ -42,6 +43,7 @@
 - (id)initWithMalletOne: (Mallet *) malletOne malletTwo: (Mallet *) malletTwo puck: (Puck *) puck fieldSize: (CGRect) fieldSize{
     self = [super init];
     if (self) {
+        self.pause = NO;
         self.puck = puck;
         self.puck.game = self;
         self.malletOne = malletOne;
@@ -64,8 +66,10 @@
 }
 
 - (void) timeElapsed {
-    [self.puck checkForCollisionsWithMalletOne:self.malletOne andMalletTwo:self.malletTwo];
-    [self.puck moveForElapsedTime: 0.1];
+    if(!self.pause){
+        [self.puck checkForCollisionsWithMalletOne:self.malletOne andMalletTwo:self.malletTwo];
+        [self.puck moveForElapsedTime: 0.1];
+    }
 }
 
 - (void) pointScoredForFirstPlayer: (Boolean) forFirstPlayer{

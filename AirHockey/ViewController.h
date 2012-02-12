@@ -20,6 +20,8 @@
     IBOutlet UIImageView *secondPlayerMallet;
     IBOutlet UIImageView *pauseImg;
     
+    NSTimer* timer;
+    
     Game* game;
 
 }
