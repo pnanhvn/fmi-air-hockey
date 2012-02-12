@@ -18,11 +18,12 @@
     IBOutlet PointsView *firstPlayerPointsView;
     IBOutlet PointsView *secondPlayerPointsView;
     IBOutlet UIImageView *secondPlayerMallet;
+    IBOutlet UIImageView *pauseImg;
     
     Game* game;
 
 }
 
--(IBAction)goToPlayerMenu;
+-(void) goToPlayerMenu:(UITapGestureRecognizer*) grec;
 
 @end
