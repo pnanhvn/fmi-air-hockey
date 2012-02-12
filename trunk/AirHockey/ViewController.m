@@ -51,9 +51,15 @@
  
     [NSTimer scheduledTimerWithTimeInterval:0.01 target:game selector:@selector(timeElapsed) userInfo:nil repeats:YES];
     
+    UITapGestureRecognizer *pauseTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(goToPlayerMenu:)];
+    [pauseImg addGestureRecognizer:pauseTap];
+    pauseTap.delegate = self;
+    
     UITapGestureRecognizer *recon = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(moveMalletOnTap:)];
     recon.delegate = self;
     [self.view addGestureRecognizer:recon];
+    
+
     
 }
 
@@ -67,7 +73,7 @@
     return YES;
 }
 
--(IBAction)goToPlayerMenu
+-(IBAction)goToPlayerMenu:(UITapGestureRecognizer*) grec
 {
     [self dismissModalViewControllerAnimated:YES];
 }

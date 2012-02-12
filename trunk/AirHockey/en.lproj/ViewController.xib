@@ -100,13 +100,28 @@
 						<string key="NSFrame">{{352, 470}, {64, 64}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="832957594"/>
+						<reference key="NSNextKeyView" ref="133545259"/>
 						<string key="NSReuseIdentifierKey">_NS:569</string>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
 							<string key="NSResourceName">puck.png</string>
+						</object>
+					</object>
+					<object class="IBUIImageView" id="133545259">
+						<reference key="NSNextResponder" ref="766721923"/>
+						<int key="NSvFlags">292</int>
+						<string key="NSFrame">{{704, 470}, {64, 64}}</string>
+						<reference key="NSSuperview" ref="766721923"/>
+						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="832957594"/>
+						<string key="NSReuseIdentifierKey">_NS:569</string>
+						<bool key="IBUIUserInteractionEnabled">NO</bool>
+						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
+						<object class="NSCustomResource" key="IBUIImage">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">pause.png</string>
 						</object>
 					</object>
 				</array>
@@ -177,6 +192,14 @@
 					</object>
 					<int key="connectionID">18</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">pauseImg</string>
+						<reference key="source" ref="841351856"/>
+						<reference key="destination" ref="133545259"/>
+					</object>
+					<int key="connectionID">20</int>
+				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<array key="orderedObjects">
@@ -207,6 +230,7 @@
 							<reference ref="832957594"/>
 							<reference ref="202817088"/>
 							<reference ref="546421774"/>
+							<reference ref="133545259"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -240,6 +264,11 @@
 						<reference key="object" ref="546421774"/>
 						<reference key="parent" ref="766721923"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">19</int>
+						<reference key="object" ref="133545259"/>
+						<reference key="parent" ref="766721923"/>
+					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
@@ -251,6 +280,7 @@
 				<string key="15.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="16.CustomClassName">PointsView</string>
 				<string key="16.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="19.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="2.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="4.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="5.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -261,7 +291,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">18</int>
+			<int key="maxID">20</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -276,20 +306,10 @@
 				<object class="IBPartialClassDescription">
 					<string key="className">ViewController</string>
 					<string key="superclassName">UIViewController</string>
-					<object class="NSMutableDictionary" key="actions">
-						<string key="NS.key.0">goToPlayerMenu</string>
-						<string key="NS.object.0">id</string>
-					</object>
-					<object class="NSMutableDictionary" key="actionInfosByName">
-						<string key="NS.key.0">goToPlayerMenu</string>
-						<object class="IBActionInfo" key="NS.object.0">
-							<string key="name">goToPlayerMenu</string>
-							<string key="candidateClassName">id</string>
-						</object>
-					</object>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="firstPlayerMallet">UIImageView</string>
 						<string key="firstPlayerPointsView">PointsView</string>
+						<string key="pauseImg">UIImageView</string>
 						<string key="puck">UIImageView</string>
 						<string key="secondPlayerMallet">UIImageView</string>
 						<string key="secondPlayerPointsView">PointsView</string>
@@ -302,6 +322,10 @@
 						<object class="IBToOneOutletInfo" key="firstPlayerPointsView">
 							<string key="name">firstPlayerPointsView</string>
 							<string key="candidateClassName">PointsView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="pauseImg">
+							<string key="name">pauseImg</string>
+							<string key="candidateClassName">UIImageView</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="puck">
 							<string key="name">puck</string>
@@ -329,6 +353,7 @@
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
 			<string key="field.png">{753, 1004}</string>
+			<string key="pause.png">{512, 512}</string>
 			<string key="puck.png">{512, 512}</string>
 		</dictionary>
 		<string key="IBCocoaTouchPluginVersion">933</string>

@@ -40,6 +40,7 @@
 		78A393B214E1A7B8000B31D7 /* PlayerMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A393B014E1A7B8000B31D7 /* PlayerMenuViewController.m */; };
 		78A393B314E1A7B8000B31D7 /* PlayerMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78A393B114E1A7B8000B31D7 /* PlayerMenuViewController.xib */; };
 		78A7207414E578EE00F86751 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 78A7207314E578EE00F86751 /* icon.png */; };
+		78A7890714E75103008B98F3 /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 78A7890614E75103008B98F3 /* pause.png */; };
 		78AA1D8B14E1D33800608BD9 /* blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 78AA1D8614E1D33800608BD9 /* blue.png */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +91,7 @@
 		78A393B014E1A7B8000B31D7 /* PlayerMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerMenuViewController.m; sourceTree = "<group>"; };
 		78A393B114E1A7B8000B31D7 /* PlayerMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerMenuViewController.xib; sourceTree = "<group>"; };
 		78A7207314E578EE00F86751 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		78A7890614E75103008B98F3 /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pause.png; path = AirHockey/pics/pause.png; sourceTree = "<group>"; };
 		78AA1D8614E1D33800608BD9 /* blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blue.png; path = AirHockey/pics/blue.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -200,6 +202,7 @@
 				78AA1D8614E1D33800608BD9 /* blue.png */,
 				43A12DAD14D0AD2900085A7B /* field.png */,
 				43A12DAE14D0AD2900085A7B /* mallet_blue.png */,
+				78A7890614E75103008B98F3 /* pause.png */,
 				43A12DAF14D0AD2900085A7B /* mallet_green.png */,
 				43A12DB014D0AD2900085A7B /* mallet_red.png */,
 				43A12DB114D0AD2900085A7B /* mallet_yellow.png */,
@@ -279,6 +282,7 @@
 				4394C79C14E57AA300997F3C /* 6.png in Resources */,
 				4394C79D14E57AA300997F3C /* 7.png in Resources */,
 				7853AA1614E581F800444EB1 /* icon72.png in Resources */,
+				78A7890714E75103008B98F3 /* pause.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
