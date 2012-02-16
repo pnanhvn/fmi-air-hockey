@@ -67,7 +67,7 @@
 		43A12DAF14D0AD2900085A7B /* mallet_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mallet_green.png; path = AirHockey/pics/mallet_green.png; sourceTree = "<group>"; };
 		43A12DB014D0AD2900085A7B /* mallet_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mallet_red.png; path = AirHockey/pics/mallet_red.png; sourceTree = "<group>"; };
 		43A12DB114D0AD2900085A7B /* mallet_yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mallet_yellow.png; path = AirHockey/pics/mallet_yellow.png; sourceTree = "<group>"; };
-		43A12DB214D0AD2900085A7B /* puck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = puck.png; path = AirHockey/pics/puck.png; sourceTree = "<group>"; };
+		43A12DB214D0AD2900085A7B /* puck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = puck.png; path = pics/puck.png; sourceTree = "<group>"; };
 		43CE4F6114DEC8D00039C682 /* Mallet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mallet.h; sourceTree = "<group>"; };
 		43CE4F6214DEC8D00039C682 /* Mallet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mallet.m; sourceTree = "<group>"; };
 		43E1C5C114D08F120082C295 /* AirHockey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirHockey.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -153,6 +153,7 @@
 			children = (
 				78A393AD14E1A73F000B31D7 /* Resources */,
 				43CE4F6114DEC8D00039C682 /* Mallet.h */,
+				43A12DB214D0AD2900085A7B /* puck.png */,
 				43CE4F6214DEC8D00039C682 /* Mallet.m */,
 				438C9F8114DED094002F91C4 /* Puck.h */,
 				438C9F8214DED094002F91C4 /* Puck.m */,
@@ -221,7 +222,6 @@
 				43A12DAF14D0AD2900085A7B /* mallet_green.png */,
 				43A12DB014D0AD2900085A7B /* mallet_red.png */,
 				43A12DB114D0AD2900085A7B /* mallet_yellow.png */,
-				43A12DB214D0AD2900085A7B /* puck.png */,
 			);
 			name = imgs;
 			sourceTree = "<group>";

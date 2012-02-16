@@ -15,7 +15,7 @@
     //CFURLRef malletHitSound;
     //UInt32 wallHitSoundID;
     //UInt32 malletHitSoundID;
-
+    Boolean test;
 
 }    
 
