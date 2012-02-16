@@ -10,40 +10,21 @@
 
 @implementation SoundManager
 
-- (id)init {
-    self = [super init];
-    if (self) {
-        wallHitSound = CFBundleCopyResourceURL(mainBundle, (CFStringRef) @"wall", CFSTR ("mp3"), nil);
-        malletHitSound = CFBundleCopyResourceURL(mainBundle, (CFStringRef) @"mallet", CFSTR ("mp3"), nil);
-        AudioServicesCreateSystemSoundID(wallHitSound, &wallHitSoundID);
-        AudioServicesCreateSystemSoundID(malletHitSound, &malletHitSoundID);
-        
-    }
-    return self;
++(void) playPuckHitWall{
+    CFBundleRef mainBundle = CFBundleGetMainBundle();
+    CFURLRef soundFileURLRef;
+    soundFileURLRef = CFBundleCopyResourceURL(mainBundle, (CFStringRef) @"wall", CFSTR ("mp3"), nil);
+    UInt32 soundID;
+    AudioServicesCreateSystemSoundID(soundFileURLRef, &soundID);
+    AudioServicesPlaySystemSound(soundID);    
 }
-
-+ (SoundManager *)getInstance
-{
-    static SoundManager *sharedSingleton;
-    
-    @synchronized(self)
-    {
-        if (!sharedSingleton)
-            sharedSingleton = [[SoundManager alloc] init];
-        
-        return sharedSingleton;
-    }
-}
-
--(void) playPuckHitWall{
-    AudioServicesPlaySystemSound(wallHitSoundID);    
-}
--(void) playPuckHitMallet{
-    AudioServicesPlaySystemSound(malletHitSoundID);    
-}
-
--(void)dealloc{
-
++(void) playPuckHitMallet{
+    CFBundleRef mainBundle = CFBundleGetMainBundle();
+    CFURLRef soundFileURLRef;
+    soundFileURLRef = CFBundleCopyResourceURL(mainBundle, (CFStringRef) @"mallet", CFSTR ("mp3"), nil);
+    UInt32 soundID;
+    AudioServicesCreateSystemSoundID(soundFileURLRef, &soundID);
+    AudioServicesPlaySystemSound(soundID);    
 }
 
 @end
