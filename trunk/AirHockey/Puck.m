@@ -10,6 +10,7 @@
 #include "math.h"
 #include "GameConstants.h"
 #import "Game.h"
+#import "SoundManager.h"
 
 
 @implementation Puck
@@ -44,13 +45,19 @@
     return false;
 }
 - (void) checkForCollisionsWithMalletOne: (PlayDisk*) malletOne andMalletTwo: (PlayDisk*) malletTwo{
-    [self checkForCollisionsWithmallet:malletOne];
+    BOOL didHitMalletOne = [self checkForCollisionsWithmallet:malletOne];
     
-    [self checkForCollisionsWithmallet:malletTwo];
+    BOOL didHitMalletTwo = [self checkForCollisionsWithmallet:malletTwo];
     
-
+    if(didHitMalletOne || didHitMalletTwo){
+        [[SoundManager getInstance] playPuckHitMallet];   
+    }
+    
+    BOOL didHitWall = false;
+    
     if(imageView.frame.origin.x < maxFieldSize.origin.x || imageView.frame.origin.x + 2 * self.radius > maxFieldSize.origin.x  + maxFieldSize.size.width ){
         self.angle = -M_PI - self.angle;
+        didHitWall = true;
     }
     
     if(imageView.frame.origin.y < maxFieldSize.origin.y || imageView.frame.origin.y + 2 * self.radius> maxFieldSize.origin.y  + maxFieldSize.size.height){
@@ -65,9 +72,11 @@
         else{
             self.angle = -self.angle;
         }
-            
- 
+        didHitWall = true;
     }
+    if(didHitWall){
+        [[SoundManager getInstance] playPuckHitWall];     }
+    
 }
 
 

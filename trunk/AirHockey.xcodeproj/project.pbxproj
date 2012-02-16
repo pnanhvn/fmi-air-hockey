@@ -40,6 +40,10 @@
 		78A393B214E1A7B8000B31D7 /* PlayerMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A393B014E1A7B8000B31D7 /* PlayerMenuViewController.m */; };
 		78A393B314E1A7B8000B31D7 /* PlayerMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78A393B114E1A7B8000B31D7 /* PlayerMenuViewController.xib */; };
 		78A7207414E578EE00F86751 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 78A7207314E578EE00F86751 /* icon.png */; };
+		78A77C8A14ED9C4500D6E4DE /* mallet.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 78A77C8814ED9C4500D6E4DE /* mallet.mp3 */; };
+		78A77C8B14ED9C4500D6E4DE /* wall.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 78A77C8914ED9C4500D6E4DE /* wall.mp3 */; };
+		78A77C8F14ED9C9300D6E4DE /* SoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A77C8E14ED9C9300D6E4DE /* SoundManager.m */; };
+		78A77C9114EDA46E00D6E4DE /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78A77C9014EDA46E00D6E4DE /* AudioToolbox.framework */; };
 		78A7890714E75103008B98F3 /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 78A7890614E75103008B98F3 /* pause.png */; };
 		78AA1D8B14E1D33800608BD9 /* blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 78AA1D8614E1D33800608BD9 /* blue.png */; };
 /* End PBXBuildFile section */
@@ -91,6 +95,11 @@
 		78A393B014E1A7B8000B31D7 /* PlayerMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerMenuViewController.m; sourceTree = "<group>"; };
 		78A393B114E1A7B8000B31D7 /* PlayerMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerMenuViewController.xib; sourceTree = "<group>"; };
 		78A7207314E578EE00F86751 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		78A77C8814ED9C4500D6E4DE /* mallet.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = mallet.mp3; path = sounds/mallet.mp3; sourceTree = "<group>"; };
+		78A77C8914ED9C4500D6E4DE /* wall.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = wall.mp3; path = sounds/wall.mp3; sourceTree = "<group>"; };
+		78A77C8D14ED9C9300D6E4DE /* SoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundManager.h; sourceTree = "<group>"; };
+		78A77C8E14ED9C9300D6E4DE /* SoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundManager.m; sourceTree = "<group>"; };
+		78A77C9014EDA46E00D6E4DE /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		78A7890614E75103008B98F3 /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pause.png; path = AirHockey/pics/pause.png; sourceTree = "<group>"; };
 		78AA1D8614E1D33800608BD9 /* blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blue.png; path = AirHockey/pics/blue.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78A77C9114EDA46E00D6E4DE /* AudioToolbox.framework in Frameworks */,
 				43E1C5C614D08F120082C295 /* UIKit.framework in Frameworks */,
 				43E1C5C814D08F120082C295 /* Foundation.framework in Frameworks */,
 				43E1C5CA14D08F120082C295 /* CoreGraphics.framework in Frameworks */,
@@ -130,6 +140,7 @@
 		43E1C5C414D08F120082C295 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				78A77C9014EDA46E00D6E4DE /* AudioToolbox.framework */,
 				43E1C5C514D08F120082C295 /* UIKit.framework */,
 				43E1C5C714D08F120082C295 /* Foundation.framework */,
 				43E1C5C914D08F120082C295 /* CoreGraphics.framework */,
@@ -161,6 +172,8 @@
 				430DDBEC14E5679100C99D0B /* Game.m */,
 				43E6DF7714E5723500E43BA8 /* PointsView.h */,
 				43E6DF7814E5723500E43BA8 /* PointsView.m */,
+				78A77C8D14ED9C9300D6E4DE /* SoundManager.h */,
+				78A77C8E14ED9C9300D6E4DE /* SoundManager.m */,
 			);
 			path = AirHockey;
 			sourceTree = "<group>";
@@ -168,6 +181,8 @@
 		43E1C5CC14D08F120082C295 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				78A77C8814ED9C4500D6E4DE /* mallet.mp3 */,
+				78A77C8914ED9C4500D6E4DE /* wall.mp3 */,
 				43E1C5CD14D08F120082C295 /* AirHockey-Info.plist */,
 				43E1C5CE14D08F120082C295 /* InfoPlist.strings */,
 				43E1C5D114D08F120082C295 /* main.m */,
@@ -283,6 +298,8 @@
 				4394C79D14E57AA300997F3C /* 7.png in Resources */,
 				7853AA1614E581F800444EB1 /* icon72.png in Resources */,
 				78A7890714E75103008B98F3 /* pause.png in Resources */,
+				78A77C8A14ED9C4500D6E4DE /* mallet.mp3 in Resources */,
+				78A77C8B14ED9C4500D6E4DE /* wall.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +320,7 @@
 				78A3495F14E3EE60004C3A7F /* MenuMalletImage.m in Sources */,
 				430DDBED14E5679100C99D0B /* Game.m in Sources */,
 				43E6DF7914E5723500E43BA8 /* PointsView.m in Sources */,
+				78A77C8F14ED9C9300D6E4DE /* SoundManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
