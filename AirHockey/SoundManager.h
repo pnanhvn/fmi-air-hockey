@@ -10,17 +10,17 @@
 #import <AudioToolbox/AudioToolbox.h>
 
 @interface SoundManager : NSObject{
-    CFBundleRef mainBundle;
-    CFURLRef wallHitSound;
-    CFURLRef malletHitSound;
-    UInt32 wallHitSoundID;
-    UInt32 malletHitSoundID;
+    //CFBundleRef mainBundle;
+    //CFURLRef wallHitSound;
+    //CFURLRef malletHitSound;
+    //UInt32 wallHitSoundID;
+    //UInt32 malletHitSoundID;
 
 
 }    
 
-+ (SoundManager *)getInstance;
--(void) playPuckHitWall;
--(void) playPuckHitMallet;
+//+ (SoundManager *)getInstance;
++(void) playPuckHitWall;
++(void) playPuckHitMallet;
 
 @end

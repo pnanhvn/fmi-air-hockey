@@ -50,7 +50,8 @@
     BOOL didHitMalletTwo = [self checkForCollisionsWithmallet:malletTwo];
     
     if(didHitMalletOne || didHitMalletTwo){
-        [[SoundManager getInstance] playPuckHitMallet];   
+        //[[SoundManager getInstance] playPuckHitMallet];   
+        [SoundManager playPuckHitMallet];
     }
     
     BOOL didHitWall = false;
@@ -75,7 +76,9 @@
         didHitWall = true;
     }
     if(didHitWall){
-        [[SoundManager getInstance] playPuckHitWall];     }
+    //    [[SoundManager getInstance] playPuckHitWall];
+        [SoundManager playPuckHitWall];
+    }
     
 }
 
