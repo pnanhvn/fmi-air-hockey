@@ -55,8 +55,7 @@
     
     if(imageView.frame.origin.y < maxFieldSize.origin.y || imageView.frame.origin.y + 2 * self.radius> maxFieldSize.origin.y  + maxFieldSize.size.height){
         int wallsToGoalDistance = (maxFieldSize.size.width - GOAL_SIZE) / 2;
-        NSLog(@"Goals is from %f to %f", wallsToGoalDistance + maxFieldSize.origin.x, maxFieldSize.size.width - wallsToGoalDistance  + maxFieldSize.origin.x);
-        if(imageView.frame.origin.x > wallsToGoalDistance + maxFieldSize.origin.x && imageView.frame.origin.x < maxFieldSize.size.width - wallsToGoalDistance  + maxFieldSize.origin.x){
+        if(imageView.frame.origin.x > wallsToGoalDistance + maxFieldSize.origin.x && imageView.frame.origin.x < maxFieldSize.size.width - wallsToGoalDistance  + maxFieldSize.origin.x - imageView.frame.size.width){
             self.speed = 0.0;
             self.angle = 0.0;
            
