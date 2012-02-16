@@ -63,7 +63,7 @@
     
     if(imageView.frame.origin.y < maxFieldSize.origin.y || imageView.frame.origin.y + 2 * self.radius> maxFieldSize.origin.y  + maxFieldSize.size.height){
         int wallsToGoalDistance = (maxFieldSize.size.width - GOAL_SIZE) / 2;
-        if(imageView.frame.origin.x > wallsToGoalDistance + maxFieldSize.origin.x && imageView.frame.origin.x < maxFieldSize.size.width - wallsToGoalDistance  + maxFieldSize.origin.x - imageView.frame.size.width){
+        if(imageView.frame.origin.x > wallsToGoalDistance + maxFieldSize.origin.x - PUCK_GOAL_TOLERANCE  * imageView.frame.size.width && imageView.frame.origin.x < maxFieldSize.size.width - wallsToGoalDistance  + maxFieldSize.origin.x - imageView.frame.size.width + PUCK_GOAL_TOLERANCE * imageView.frame.size.width){
             self.speed = 0.0;
             self.angle = 0.0;
            
@@ -95,7 +95,10 @@
     
     if (self.speed > MIN_SPEED) {
         imageView.frame= CGRectMake(newX, newY, imageView.frame.size.width, imageView.frame.size.height);
-        self.speed -= FRICTION_PERCENTAGE*self.speed;  
+        if(FRICTION_PERCENTAGE*self.speed >= MIN_DECREASE)
+            self.speed -= FRICTION_PERCENTAGE*self.speed;  
+        else
+            self.speed -= MIN_DECREASE;
     }
     else{
         self.speed = 0.0;
